@@ -1,5 +1,5 @@
 # HUGE_dataset
-Download <a href="https://www.ncbi.nlm.nih.gov/Traces/study/?acc=prjna217052&go=go" target="_blank">huge dataset</a> (prjna217052), clean with snakemake quality control protocol, and align with BWA MEM. Before download, I wrote an R script to find the SRR numbers for only samples that were part of the HUGE study, as the prjna217052 bioproject includes far more data.
+Download [huge dataset](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=prjna217052&go=go) (prjna217052), clean with snakemake quality control protocol, and align with BWA MEM. Before download, I wrote an R script to find the SRR numbers for only samples that were part of the HUGE study, as the prjna217052 bioproject includes far more data.
 
 ### Downloading the huge dataset (`./`)
 The HUGE dataset includes illumina sequencing reads from two patients over the course of the year. In this project, I will download the fastq files for each sample.
