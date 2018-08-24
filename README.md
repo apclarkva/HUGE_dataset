@@ -11,3 +11,5 @@ Files, in logical order of execution:
 
 ### Clean files with snakemake QC protocol (`./QC/Snake_qc`)
 The quality control (QC) protocol includes removing duplicate reads, human reads, and Illumina adapters from metagenomic data, and performs quality trimming. Each step is outlined below. It is important to keep track of read counts at each step (i.e. how many reads are you losing at each step?) and making sure that every file completes each step successfully.
+
+### BWA MEM
