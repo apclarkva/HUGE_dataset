@@ -2,6 +2,7 @@
 #$ -cwd
 #$ -N download_HUGE_dataset
 #$ -V
+#$ -pe parenv 16
 #$ -m bes
 #$ -M apclarkva@gmail.com
 #$ -q long.q@cbsubrito
@@ -9,4 +10,3 @@
 
 ## call the python function
 python3 DownloadFastQ.py
-
