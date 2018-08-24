@@ -31,4 +31,3 @@ ERR=/workdir/users/agk85/gates/gates_QC/err #change this
 
 #and remember to change your snake file so it points to your directory first main line with samples
 snakemake -s $SNAKEFILE --restart-times $RESTARTS --jobs $JOBS --cluster "qsub -q long.q@cbsubrito2 -S /bin/bash -e $ERR -o $LOG -N {params.n} -l h_vmem={resources.mem_mb}G"
-

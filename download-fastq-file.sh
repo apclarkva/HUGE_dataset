@@ -1,1 +1,1 @@
-fastq-dump "$1" --gzip --outdir "./fastq"
+fastq-dump "$1" --gzip --split-files --outdir "./raw_fastq"

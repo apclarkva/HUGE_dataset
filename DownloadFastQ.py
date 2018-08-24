@@ -14,10 +14,8 @@ def download(srr_number):
     pass
 
 #this limits to 30 threads I'm pretty sure this will scale to cores
-with ThreadPoolExecutor(max_workers=8) as executor:
+with ThreadPoolExecutor(max_workers=16) as executor:
     for srr_number in srr_data:
         future = executor.submit(download, srr_number)
 
     print(future.result())
-
-
