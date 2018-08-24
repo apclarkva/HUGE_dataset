@@ -1,0 +1,44 @@
+#$ -S /bin/bash
+#$ -N derep_twins
+#$ -V
+#$ -o /workdir/users/cmp254/derep.out ###
+#$ -e /workdir/users/cmp254/derep.err ###
+#$ -wd /workdir/users/cmp254 #Your working directory
+#$ -l h_vmem=15G
+#$ -t 1
+
+
+#Set directories
+WRK=/workdir/
+FQ= #Location of your FQ files
+DEREP=$WRK/dereplication #Location for your output
+
+
+#Create design file of file names
+DESIGN_FILE=/workdir/users/ #Your list of file names
+DESIGN=$(sed -n "${SGE_TASK_ID}p" $DESIGN_FILE)
+      IFS=',' read -ra ARRAY <<< "$DESIGN"
+      
+        BATCH=${ARRAY[0]}
+        SAMPLE=${ARRAY[1]}
+	     
+READ1=$FQ/${SAMPLE}.1.fq
+READ2=$FQ/${SAMPLE}.2.fq
+
+PRINSEQ=/programs/prinseq-lite-0.20.2
+
+gunzip $READ1.gz
+gunzip $READ2.gz
+
+cd $DEREP
+echo $SAMPLE dereplication start
+
+#run Prinseq program --to reduce output file size use -no_qual_header to force program to not add additional header to qual line
+perl $PRINSEQ/prinseq-lite.pl -fastq $READ1 -fastq2 $READ2 -derep 12345 -out_format 3 -out_good $DEREP/${SAMPLE}.derep -no_qual_header
+
+echo $SAMPLE dereplication complete
+wc -l $DEREP/${SAMPLE}.derep_1.fastq
+wc -l $DEREP/${SAMPLE}.derep_2.fastq
+
+gzip $READ1
+gzip $READ2

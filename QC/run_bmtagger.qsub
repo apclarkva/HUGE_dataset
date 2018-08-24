@@ -1,0 +1,48 @@
+#$ -S /bin/bash
+#$ -N bmtag_twins
+#$ -o /workdir/users/bmtag.out #Location to send stdout, ex: bmtag.out
+#$ -e /workdir/users/bmtag.err #Location to send stderr, ex: bmtag.err
+#$ -wd /workdir/users/cmp254 #Your working directory
+#$ -pe parenv 1
+#$ -l h_vmem=15Gv #this may need to be adjusted depending on your data
+#$ -q long.q
+#$ -t 1 #Your array jobs, i.e. if you have 500 files, 1-500
+
+
+## This script runs BMTagger which removes human reads from metagenomic data
+
+#Set directories
+WRK=/workdir/data #Wherever your working directory is
+FQ=$WRK/ #Wherever your FQ files are 
+BMOUT=$WRK/bmtagger #Where you want your output to go 
+
+#Create design file of file names
+DESIGN_FILE=/workdir/users/ #list of your file names
+DESIGN=$(sed -n "${SGE_TASK_ID}p" $DESIGN_FILE)
+IFS=',' read -ra ARRAY <<< "$DESIGN"
+      
+        BATCH=${ARRAY[0]}
+        SAMPLE=${ARRAY[1]}
+
+################# BMTAGGER ######################
+export PATH=/programs/ncbi-blast-2.3.0+/bin:$PATH
+BMTAGGER=/programs/bmtools/bmtagger
+
+REFGENOME=/home/britolab/refdbs/HUMAN/Homo_sapiens_assembly19.fasta
+CONFIG=/workdir/users/fnn3/references/bmtagger.conf
+
+
+if [ ! -e ${BMOUT}/${SAMPLE} ]; then mkdir -p ${BMOUT}/${SAMPLE}; fi
+cd $BMOUT/$SAMPLE
+
+echo ${SAMPLE} bmtagger start
+
+${BMTAGGER}/bmtagger.sh -C $CONFIG -b ${REFGENOME}.bitmask -x ${REFGENOME}.srprism -T ${BMOUT}/${SAMPLE} -q1 \
+-1 ${FQ}/${SAMPLE}.1.fastq -2 ${FQ}/${SAMPLE}.2.fastq -o ${BMOUT}/${SAMPLE}/${SAMPLE}.human -X 
+
+echo $SAMPLE bmtagger complete
+
+wc -l $BMOUT/${SAMPLE}/${SAMPLE}.human_1.fastq
+wc -l $BMOUT/${SAMPLE}/${SAMPLE}.human_2.fastq
+
+
