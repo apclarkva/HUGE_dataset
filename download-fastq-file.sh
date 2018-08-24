@@ -1,4 +1,1 @@
-me=$(echo "$1" | cut -c 1-13)
-filename=$(echo "$filename".1)
-echo $srrFile
-
+fastq-dump "$1" --gzip --outdir "./fastq"

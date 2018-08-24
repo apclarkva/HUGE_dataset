@@ -10,11 +10,11 @@ text_file.close
 
 #this just wraps a small shell script that does the downloading
 def download(srr_number):
-    call("./download-fastq-file.sh" + srr_number, shell=True) 
+    call("./download-fastq-file.sh %s" % str(srr_number), shell=True) 
     pass
 
 #this limits to 30 threads I'm pretty sure this will scale to cores
-with ThreadPoolExecutor(max_workers=30) as executor:
+with ThreadPoolExecutor(max_workers=8) as executor:
     for srr_number in srr_data:
         future = executor.submit(download, srr_number)
 

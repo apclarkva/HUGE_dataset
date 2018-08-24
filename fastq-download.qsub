@@ -1,0 +1,12 @@
+#$ -S /bin/bash
+#$ -cwd
+#$ -N download_HUGE_dataset
+#$ -V
+#$ -m bes
+#$ -M apclarkva@gmail.com
+#$ -q long.q@cbsubrito
+#$ -l h_vmem=16G 
+
+## call the python function
+python3 DownloadFastQ.py
+
