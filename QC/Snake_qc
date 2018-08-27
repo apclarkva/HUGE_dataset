@@ -66,10 +66,10 @@ rule bmtagger:
 	params: 
 		n="bmt_{NAME}",
 		out=BASE + "/2-bmtagger",
-		config="/home/britolab/refdbs/bmtagger.conf",
+		config="/workdir/refdbs/QC/bmtagger.conf",
 		name="{NAME}",
 		base=BASE,
-		REFGENOME="/home/britolab/refdbs/HUMAN/Homo_sapiens_assembly19.fasta"
+		REFGENOME="/workdir/refdbs/QC/Homo_sapiens_assembly19.fasta"
 	resources:
 		mem_mb=lambda wildcards, attempt: attempt * 10
 	output:
@@ -88,7 +88,7 @@ rule trimmo:
 	params:
 		n="trim_{NAME}",
 		out=BASE + "/3-trimmo",
-        	ADAPTER="/home/britolab/refdbs/nextera_truseq_adapters.fasta"
+        	ADAPTER="/workdir/refdbs/QC/nextera_truseq_adapters.fasta"
 	resources:
 		mem_mb=lambda wildcards, attempt: attempt * 10
 	output:
@@ -149,24 +149,8 @@ rule Combine_readcounts:
 		BASE + '/ReadCounts.txt'
 	run:
 		with open(output[0], 'w') as out:
+			out.write('Name\tRaw_R1\tRaw_R2\tDerep_R1\tDerep_R2\tBmtagger_R1\tBmtagger_R2\tTrimmo_R1\tTrimmo_R2\tTrimmo_solo_R1\tTrimmo_solo_R2\n')
 			for i in input:
 				for line in open(i):
-
-
 					out.write(line)
 
-#this doesn't work because it doesn't have an outfile that needs to be completed...so if we want to do a cleanup
-#maybe we just specify a finish file that we touch after we delete everyting
-
-rule clean_up:
-	input: 
-		BASE + '/ReadCounts.txt'
-	params: 
-		n="cleanup",
-		d=BASE+"/1-derep/",
-		b=BASE+"/2-bmtagger/"
-	message: """Remove directories"""
-	shell:"""
-	rm -r {params.d}
-	rm -r {params.b}
-        """
