@@ -1,0 +1,585 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Unlimited resources: mem_mb
+Job counts:
+	count	jobs
+	1	Combine_readcounts
+	240	bmtagger
+	240	derep
+	1	final
+	240	gunzip
+	240	readCount
+	240	trimmo
+	1202
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2194076_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2194076_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2194076_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194076_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194076_unzip_done
+    jobid: 378
+    wildcards: NAME=SRR2194076
+    resources: mem_mb=10
+
+Submitted job 378 with external jobid 'Your job 178722 ("unzip_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2191162_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2191162_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2191162_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191162_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191162_unzip_done
+    jobid: 26
+    wildcards: NAME=SRR2191162
+    resources: mem_mb=10
+
+Submitted job 26 with external jobid 'Your job 178723 ("unzip_SRR2191162") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2247080_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2247080_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2247080_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247080_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247080_unzip_done
+    jobid: 146
+    wildcards: NAME=SRR2247080
+    resources: mem_mb=10
+
+Submitted job 146 with external jobid 'Your job 178724 ("unzip_SRR2247080") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2187353_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2187353_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2187353_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187353_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187353_unzip_done
+    jobid: 250
+    wildcards: NAME=SRR2187353
+    resources: mem_mb=10
+
+Submitted job 250 with external jobid 'Your job 178725 ("unzip_SRR2187353") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2247087_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2247087_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2247087_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247087_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247087_unzip_done
+    jobid: 29
+    wildcards: NAME=SRR2247087
+    resources: mem_mb=10
+
+Submitted job 29 with external jobid 'Your job 178726 ("unzip_SRR2247087") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2187348_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2187348_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2187348_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187348_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187348_unzip_done
+    jobid: 1
+    wildcards: NAME=SRR2187348
+    resources: mem_mb=10
+
+Submitted job 1 with external jobid 'Your job 178727 ("unzip_SRR2187348") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2198982_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2198982_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2198982_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198982_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198982_unzip_done
+    jobid: 166
+    wildcards: NAME=SRR2198982
+    resources: mem_mb=10
+
+Submitted job 166 with external jobid 'Your job 178728 ("unzip_SRR2198982") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2198979_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2198979_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2198979_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198979_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198979_unzip_done
+    jobid: 179
+    wildcards: NAME=SRR2198979
+    resources: mem_mb=10
+
+Submitted job 179 with external jobid 'Your job 178729 ("unzip_SRR2198979") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2243797_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2243797_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2243797_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2243797_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2243797_unzip_done
+    jobid: 19
+    wildcards: NAME=SRR2243797
+    resources: mem_mb=10
+
+Submitted job 19 with external jobid 'Your job 178730 ("unzip_SRR2243797") has been submitted'.
+
+[Mon Aug 27 11:03:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2247432_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2247432_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2247432_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247432_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247432_unzip_done
+    jobid: 508
+    wildcards: NAME=SRR2247432
+    resources: mem_mb=10
+
+Submitted job 508 with external jobid 'Your job 178731 ("unzip_SRR2247432") has been submitted'.
+[Mon Aug 27 11:04:47 2018]
+Finished job 378.
+1 of 1202 steps (0.08%) done
+[Mon Aug 27 11:04:47 2018]
+Finished job 26.
+2 of 1202 steps (0.17%) done
+[Mon Aug 27 11:04:47 2018]
+Finished job 250.
+3 of 1202 steps (0.25%) done
+[Mon Aug 27 11:04:47 2018]
+Finished job 1.
+4 of 1202 steps (0.33%) done
+[Mon Aug 27 11:04:47 2018]
+Finished job 179.
+5 of 1202 steps (0.42%) done
+
+[Mon Aug 27 11:04:47 2018]
+Job 1090: --- Dereplication
+
+Submitted job 1090 with external jobid 'Your job 178732 ("derep_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:04:48 2018]
+Job 840: --- Dereplication
+
+Submitted job 840 with external jobid 'Your job 178733 ("derep_SRR2198979") has been submitted'.
+
+[Mon Aug 27 11:04:48 2018]
+Job 978: --- Dereplication
+
+Submitted job 978 with external jobid 'Your job 178734 ("derep_SRR2187348") has been submitted'.
+
+[Mon Aug 27 11:04:48 2018]
+Job 1158: --- Dereplication
+
+Submitted job 1158 with external jobid 'Your job 178735 ("derep_SRR2187353") has been submitted'.
+
+[Mon Aug 27 11:04:48 2018]
+Job 1177: --- Dereplication
+
+Submitted job 1177 with external jobid 'Your job 178736 ("derep_SRR2191162") has been submitted'.
+[Mon Aug 27 11:05:09 2018]
+Finished job 146.
+6 of 1202 steps (0.50%) done
+
+[Mon Aug 27 11:05:09 2018]
+Job 1047: --- Dereplication
+
+[Mon Aug 27 11:05:09 2018]
+Finished job 29.
+7 of 1202 steps (0.58%) done
+[Mon Aug 27 11:05:09 2018]
+Finished job 19.
+8 of 1202 steps (0.67%) done
+[Mon Aug 27 11:05:09 2018]
+Finished job 508.
+9 of 1202 steps (0.75%) done
+Submitted job 1047 with external jobid 'Your job 178737 ("derep_SRR2247080") has been submitted'.
+
+[Mon Aug 27 11:05:09 2018]
+Job 733: --- Dereplication
+
+Submitted job 733 with external jobid 'Your job 178738 ("derep_SRR2247432") has been submitted'.
+
+[Mon Aug 27 11:05:09 2018]
+Job 1148: --- Dereplication
+
+Submitted job 1148 with external jobid 'Your job 178739 ("derep_SRR2243797") has been submitted'.
+
+[Mon Aug 27 11:05:09 2018]
+Job 1002: --- Dereplication
+
+Submitted job 1002 with external jobid 'Your job 178740 ("derep_SRR2247087") has been submitted'.
+[Mon Aug 27 11:05:31 2018]
+Finished job 166.
+10 of 1202 steps (0.83%) done
+
+[Mon Aug 27 11:05:31 2018]
+Job 938: --- Dereplication
+
+Submitted job 938 with external jobid 'Your job 178741 ("derep_SRR2198982") has been submitted'.
+[Mon Aug 27 11:09:00 2018]
+Finished job 840.
+11 of 1202 steps (0.92%) done
+
+[Mon Aug 27 11:09:00 2018]
+Job 841: --- BMTagger
+
+[Mon Aug 27 11:09:00 2018]
+Finished job 1177.
+12 of 1202 steps (1.00%) done
+Submitted job 841 with external jobid 'Your job 178742 ("bmt_SRR2198979") has been submitted'.
+
+[Mon Aug 27 11:09:00 2018]
+Job 1134: --- BMTagger
+
+Submitted job 1134 with external jobid 'Your job 178743 ("bmt_SRR2191162") has been submitted'.
+[Mon Aug 27 11:09:11 2018]
+Finished job 1090.
+13 of 1202 steps (1%) done
+
+[Mon Aug 27 11:09:11 2018]
+Job 862: --- BMTagger
+
+[Mon Aug 27 11:09:11 2018]
+Finished job 1158.
+14 of 1202 steps (1%) done
+Submitted job 862 with external jobid 'Your job 178744 ("bmt_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:09:11 2018]
+Job 1092: --- BMTagger
+
+Submitted job 1092 with external jobid 'Your job 178745 ("bmt_SRR2187353") has been submitted'.
+[Mon Aug 27 11:09:22 2018]
+Finished job 978.
+15 of 1202 steps (1%) done
+
+    [Mon Aug 27 11:09:22 2018]
+[Mon Aug 27 11:09:22 2018]
+    Error in rule bmtagger:
+Job 941: --- BMTagger
+        jobid: 841
+
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_2.fastq
+        cluster_jobid: Your job 178742 ("bmt_SRR2198979") has been submitted
+
+Trying to restart job 841.
+    [Mon Aug 27 11:09:22 2018]
+    Error in rule bmtagger:
+        jobid: 1134
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_2.fastq
+        cluster_jobid: Your job 178743 ("bmt_SRR2191162") has been submitted
+
+Trying to restart job 1134.
+    [Mon Aug 27 11:09:22 2018]
+    Error in rule bmtagger:
+        jobid: 862
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_2.fastq
+        cluster_jobid: Your job 178744 ("bmt_SRR2194076") has been submitted
+
+Trying to restart job 862.
+    [Mon Aug 27 11:09:22 2018]
+    Error in rule bmtagger:
+        jobid: 1092
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_2.fastq
+        cluster_jobid: Your job 178745 ("bmt_SRR2187353") has been submitted
+
+Trying to restart job 1092.
+Submitted job 941 with external jobid 'Your job 178746 ("bmt_SRR2187348") has been submitted'.
+
+[Mon Aug 27 11:09:22 2018]
+Job 1134: --- BMTagger
+
+Submitted job 1134 with external jobid 'Your job 178747 ("bmt_SRR2191162") has been submitted'.
+
+[Mon Aug 27 11:09:22 2018]
+Job 862: --- BMTagger
+
+Submitted job 862 with external jobid 'Your job 178748 ("bmt_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:09:22 2018]
+Job 1092: --- BMTagger
+
+Submitted job 1092 with external jobid 'Your job 178749 ("bmt_SRR2187353") has been submitted'.
+
+[Mon Aug 27 11:09:22 2018]
+Job 841: --- BMTagger
+
+Submitted job 841 with external jobid 'Your job 178750 ("bmt_SRR2198979") has been submitted'.
+    [Mon Aug 27 11:09:33 2018]
+    Error in rule bmtagger:
+        jobid: 941
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_2.fastq
+        cluster_jobid: Your job 178746 ("bmt_SRR2187348") has been submitted
+
+Trying to restart job 941.
+
+    [Mon Aug 27 11:09:33 2018]
+[Mon Aug 27 11:09:33 2018]
+    Error in rule bmtagger:
+Job 941: --- BMTagger
+        jobid: 1134
+
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_2.fastq
+        cluster_jobid: Your job 178747 ("bmt_SRR2191162") has been submitted
+
+Trying to restart job 1134.
+    [Mon Aug 27 11:09:33 2018]
+    Error in rule bmtagger:
+        jobid: 862
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_2.fastq
+        cluster_jobid: Your job 178748 ("bmt_SRR2194076") has been submitted
+
+Trying to restart job 862.
+    [Mon Aug 27 11:09:33 2018]
+    Error in rule bmtagger:
+        jobid: 1092
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_2.fastq
+        cluster_jobid: Your job 178749 ("bmt_SRR2187353") has been submitted
+
+Trying to restart job 1092.
+    [Mon Aug 27 11:09:33 2018]
+    Error in rule bmtagger:
+        jobid: 841
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_2.fastq
+        cluster_jobid: Your job 178750 ("bmt_SRR2198979") has been submitted
+
+Trying to restart job 841.
+Submitted job 941 with external jobid 'Your job 178751 ("bmt_SRR2187348") has been submitted'.
+
+[Mon Aug 27 11:09:33 2018]
+Job 1134: --- BMTagger
+
+Submitted job 1134 with external jobid 'Your job 178752 ("bmt_SRR2191162") has been submitted'.
+
+[Mon Aug 27 11:09:33 2018]
+Job 862: --- BMTagger
+
+Submitted job 862 with external jobid 'Your job 178753 ("bmt_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:09:33 2018]
+Job 1092: --- BMTagger
+
+Submitted job 1092 with external jobid 'Your job 178754 ("bmt_SRR2187353") has been submitted'.
+
+[Mon Aug 27 11:09:33 2018]
+Job 841: --- BMTagger
+
+Submitted job 841 with external jobid 'Your job 178755 ("bmt_SRR2198979") has been submitted'.
+    [Mon Aug 27 11:09:44 2018]
+    Error in rule bmtagger:
+        jobid: 941
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_2.fastq
+        cluster_jobid: Your job 178751 ("bmt_SRR2187348") has been submitted
+
+Trying to restart job 941.
+
+[Mon Aug 27 11:09:44 2018]
+Job 941: --- BMTagger
+
+    [Mon Aug 27 11:09:44 2018]
+    Error in rule bmtagger:
+        jobid: 1134
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_2.fastq
+        cluster_jobid: Your job 178752 ("bmt_SRR2191162") has been submitted
+
+Trying to restart job 1134.
+    [Mon Aug 27 11:09:44 2018]
+    Error in rule bmtagger:
+        jobid: 862
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_2.fastq
+        cluster_jobid: Your job 178753 ("bmt_SRR2194076") has been submitted
+
+Trying to restart job 862.
+    [Mon Aug 27 11:09:44 2018]
+    Error in rule bmtagger:
+        jobid: 1092
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_2.fastq
+        cluster_jobid: Your job 178754 ("bmt_SRR2187353") has been submitted
+
+Trying to restart job 1092.
+    [Mon Aug 27 11:09:44 2018]
+    Error in rule bmtagger:
+        jobid: 841
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_2.fastq
+        cluster_jobid: Your job 178755 ("bmt_SRR2198979") has been submitted
+
+Trying to restart job 841.
+Submitted job 941 with external jobid 'Your job 178756 ("bmt_SRR2187348") has been submitted'.
+
+[Mon Aug 27 11:09:44 2018]
+Job 1134: --- BMTagger
+
+Submitted job 1134 with external jobid 'Your job 178757 ("bmt_SRR2191162") has been submitted'.
+
+[Mon Aug 27 11:09:44 2018]
+Job 862: --- BMTagger
+
+Submitted job 862 with external jobid 'Your job 178758 ("bmt_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:09:44 2018]
+Job 1092: --- BMTagger
+
+Submitted job 1092 with external jobid 'Your job 178759 ("bmt_SRR2187353") has been submitted'.
+
+[Mon Aug 27 11:09:44 2018]
+Job 841: --- BMTagger
+
+Submitted job 841 with external jobid 'Your job 178760 ("bmt_SRR2198979") has been submitted'.
+    [Mon Aug 27 11:10:06 2018]
+    Error in rule bmtagger:
+        jobid: 941
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_2.fastq
+        cluster_jobid: Your job 178756 ("bmt_SRR2187348") has been submitted
+
+Trying to restart job 941.
+    [Mon Aug 27 11:10:06 2018]
+    Error in rule bmtagger:
+        jobid: 1134
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_2.fastq
+        cluster_jobid: Your job 178757 ("bmt_SRR2191162") has been submitted
+
+
+Trying to restart job 1134.
+[Mon Aug 27 11:10:06 2018]
+Job 941: --- BMTagger
+
+    [Mon Aug 27 11:10:06 2018]
+    Error in rule bmtagger:
+        jobid: 862
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_2.fastq
+        cluster_jobid: Your job 178758 ("bmt_SRR2194076") has been submitted
+
+Trying to restart job 862.
+    [Mon Aug 27 11:10:06 2018]
+    Error in rule bmtagger:
+        jobid: 1092
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_2.fastq
+        cluster_jobid: Your job 178759 ("bmt_SRR2187353") has been submitted
+
+Trying to restart job 1092.
+Submitted job 941 with external jobid 'Your job 178761 ("bmt_SRR2187348") has been submitted'.
+
+[Mon Aug 27 11:10:06 2018]
+Job 1134: --- BMTagger
+
+Submitted job 1134 with external jobid 'Your job 178762 ("bmt_SRR2191162") has been submitted'.
+
+[Mon Aug 27 11:10:06 2018]
+Job 862: --- BMTagger
+
+Submitted job 862 with external jobid 'Your job 178763 ("bmt_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:10:06 2018]
+Job 1092: --- BMTagger
+
+Submitted job 1092 with external jobid 'Your job 178764 ("bmt_SRR2187353") has been submitted'.
+    [Mon Aug 27 11:10:17 2018]
+    Error in rule bmtagger:
+        jobid: 841
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_2.fastq
+        cluster_jobid: Your job 178760 ("bmt_SRR2198979") has been submitted
+
+Trying to restart job 841.
+
+[Mon Aug 27 11:10:17 2018]
+Job 841: --- BMTagger
+
+    [Mon Aug 27 11:10:17 2018]
+    Error in rule bmtagger:
+        jobid: 941
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_2.fastq
+        cluster_jobid: Your job 178761 ("bmt_SRR2187348") has been submitted
+
+Trying to restart job 941.
+    [Mon Aug 27 11:10:17 2018]
+    Error in rule bmtagger:
+        jobid: 1134
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_2.fastq
+        cluster_jobid: Your job 178762 ("bmt_SRR2191162") has been submitted
+
+Trying to restart job 1134.
+    [Mon Aug 27 11:10:17 2018]
+    Error in rule bmtagger:
+        jobid: 862
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_2.fastq
+        cluster_jobid: Your job 178763 ("bmt_SRR2194076") has been submitted
+
+Trying to restart job 862.
+Submitted job 841 with external jobid 'Your job 178765 ("bmt_SRR2198979") has been submitted'.
+
+[Mon Aug 27 11:10:17 2018]
+Job 1134: --- BMTagger
+
+Submitted job 1134 with external jobid 'Your job 178766 ("bmt_SRR2191162") has been submitted'.
+
+[Mon Aug 27 11:10:17 2018]
+Job 862: --- BMTagger
+
+Submitted job 862 with external jobid 'Your job 178767 ("bmt_SRR2194076") has been submitted'.
+
+[Mon Aug 27 11:10:17 2018]
+Job 941: --- BMTagger
+
+Submitted job 941 with external jobid 'Your job 178768 ("bmt_SRR2187348") has been submitted'.
+[Mon Aug 27 11:10:28 2018]
+Finished job 733.
+16 of 1202 steps (1%) done
+
+[Mon Aug 27 11:10:28 2018]
+Job 732: --- BMTagger
+
+[Mon Aug 27 11:10:28 2018]
+Finished job 1148.
+17 of 1202 steps (1%) done
+Submitted job 732 with external jobid 'Your job 178769 ("bmt_SRR2247432") has been submitted'.
+
+[Mon Aug 27 11:10:28 2018]
+Job 1076: --- BMTagger
+
+Submitted job 1076 with external jobid 'Your job 178770 ("bmt_SRR2243797") has been submitted'.
+[Mon Aug 27 11:10:39 2018]
+Finished job 1047.
+18 of 1202 steps (1%) done
+
+[Mon Aug 27 11:10:39 2018]
+Job 857: --- BMTagger
+
+[Mon Aug 27 11:10:39 2018]
+Finished job 1002.
+19 of 1202 steps (2%) done
+    [Mon Aug 27 11:10:39 2018]
+    Error in rule bmtagger:
+        jobid: 1092
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187353.human_2.fastq
+        cluster_jobid: Your job 178764 ("bmt_SRR2187353") has been submitted
+
+Trying to restart job 1092.
+    [Mon Aug 27 11:10:39 2018]
+    Error in rule bmtagger:
+        jobid: 841
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2198979.human_2.fastq
+        cluster_jobid: Your job 178765 ("bmt_SRR2198979") has been submitted
+
+Trying to restart job 841.
+    [Mon Aug 27 11:10:39 2018]
+    Error in rule bmtagger:
+        jobid: 1134
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2191162.human_2.fastq
+        cluster_jobid: Your job 178766 ("bmt_SRR2191162") has been submitted
+
+    [Mon Aug 27 11:10:39 2018]
+    Error in rule bmtagger:
+        jobid: 732
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2247432.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2247432.human_2.fastq
+        cluster_jobid: Your job 178769 ("bmt_SRR2247432") has been submitted
+
+Trying to restart job 732.
+    [Mon Aug 27 11:10:39 2018]
+    Error in rule bmtagger:
+        jobid: 1076
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2243797.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2243797.human_2.fastq
+        cluster_jobid: Your job 178770 ("bmt_SRR2243797") has been submitted
+
+Trying to restart job 1076.
+Submitted job 857 with external jobid 'Your job 178771 ("bmt_SRR2247080") has been submitted'.
+    [Mon Aug 27 11:10:50 2018]
+    Error in rule bmtagger:
+        jobid: 862
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2194076.human_2.fastq
+        cluster_jobid: Your job 178767 ("bmt_SRR2194076") has been submitted
+
+    [Mon Aug 27 11:10:50 2018]
+    Error in rule bmtagger:
+        jobid: 941
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2187348.human_2.fastq
+        cluster_jobid: Your job 178768 ("bmt_SRR2187348") has been submitted
+
+Trying to restart job 941.
+    [Mon Aug 27 11:10:50 2018]
+    Error in rule bmtagger:
+        jobid: 857
+        output: /workdir/data/HUGE_dataset/2-bmtagger/SRR2247080.human_1.fastq, /workdir/data/HUGE_dataset/2-bmtagger/SRR2247080.human_2.fastq
+        cluster_jobid: Your job 178771 ("bmt_SRR2247080") has been submitted
+
+Trying to restart job 857.
+[Mon Aug 27 11:12:00 2018]
+Finished job 938.
+20 of 1202 steps (2%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /local/workdir/data/HUGE_dataset/.snakemake/log/2018-08-27T110329.300827.snakemake.log

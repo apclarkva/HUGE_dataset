@@ -1,0 +1,2509 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Unlimited resources: mem_mb
+Job counts:
+	count	jobs
+	1	Combine_readcounts
+	240	bmtagger
+	240	derep
+	1	final
+	240	gunzip
+	240	readCount
+	240	trimmo
+	1202
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2191162_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2191162_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2191162_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191162_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191162_unzip_done
+    jobid: 26
+    wildcards: NAME=SRR2191162
+    resources: mem_mb=10
+
+Submitted job 26 with external jobid 'Your job 178776 ("unzip_SRR2191162") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2247087_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2247087_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2247087_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247087_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247087_unzip_done
+    jobid: 500
+    wildcards: NAME=SRR2247087
+    resources: mem_mb=10
+
+Submitted job 500 with external jobid 'Your job 178777 ("unzip_SRR2247087") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2187353_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2187353_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2187353_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187353_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187353_unzip_done
+    jobid: 244
+    wildcards: NAME=SRR2187353
+    resources: mem_mb=10
+
+Submitted job 244 with external jobid 'Your job 178778 ("unzip_SRR2187353") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2187348_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2187348_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2187348_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187348_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187348_unzip_done
+    jobid: 238
+    wildcards: NAME=SRR2187348
+    resources: mem_mb=10
+
+Submitted job 238 with external jobid 'Your job 178779 ("unzip_SRR2187348") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2198982_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2198982_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2198982_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198982_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198982_unzip_done
+    jobid: 333
+    wildcards: NAME=SRR2198982
+    resources: mem_mb=10
+
+Submitted job 333 with external jobid 'Your job 178780 ("unzip_SRR2198982") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2247432_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2247432_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2247432_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247432_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247432_unzip_done
+    jobid: 183
+    wildcards: NAME=SRR2247432
+    resources: mem_mb=10
+
+Submitted job 183 with external jobid 'Your job 178781 ("unzip_SRR2247432") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2194076_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2194076_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2194076_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194076_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194076_unzip_done
+    jobid: 236
+    wildcards: NAME=SRR2194076
+    resources: mem_mb=10
+
+Submitted job 236 with external jobid 'Your job 178782 ("unzip_SRR2194076") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2247080_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2247080_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2247080_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247080_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247080_unzip_done
+    jobid: 12
+    wildcards: NAME=SRR2247080
+    resources: mem_mb=10
+
+Submitted job 12 with external jobid 'Your job 178783 ("unzip_SRR2247080") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2243797_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2243797_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2243797_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2243797_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2243797_unzip_done
+    jobid: 66
+    wildcards: NAME=SRR2243797
+    resources: mem_mb=10
+
+Submitted job 66 with external jobid 'Your job 178784 ("unzip_SRR2243797") has been submitted'.
+
+[Mon Aug 27 13:43:46 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2198979_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2198979_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2198979_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198979_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198979_unzip_done
+    jobid: 235
+    wildcards: NAME=SRR2198979
+    resources: mem_mb=10
+
+Submitted job 235 with external jobid 'Your job 178785 ("unzip_SRR2198979") has been submitted'.
+[Mon Aug 27 13:44:40 2018]
+Finished job 26.
+1 of 1202 steps (0.08%) done
+[Mon Aug 27 13:44:40 2018]
+Finished job 244.
+2 of 1202 steps (0.17%) done
+[Mon Aug 27 13:44:40 2018]
+Finished job 238.
+3 of 1202 steps (0.25%) done
+[Mon Aug 27 13:44:40 2018]
+Finished job 236.
+4 of 1202 steps (0.33%) done
+[Mon Aug 27 13:44:40 2018]
+Finished job 235.
+5 of 1202 steps (0.42%) done
+
+[Mon Aug 27 13:44:40 2018]
+Job 862: --- Dereplication
+
+Submitted job 862 with external jobid 'Your job 178786 ("derep_SRR2191162") has been submitted'.
+
+[Mon Aug 27 13:44:40 2018]
+Job 1123: --- Dereplication
+
+Submitted job 1123 with external jobid 'Your job 178787 ("derep_SRR2198979") has been submitted'.
+
+[Mon Aug 27 13:44:41 2018]
+Job 1200: --- Dereplication
+
+Submitted job 1200 with external jobid 'Your job 178788 ("derep_SRR2194076") has been submitted'.
+
+[Mon Aug 27 13:44:41 2018]
+Job 1096: --- Dereplication
+
+Submitted job 1096 with external jobid 'Your job 178789 ("derep_SRR2187353") has been submitted'.
+
+[Mon Aug 27 13:44:41 2018]
+Job 757: --- Dereplication
+
+Submitted job 757 with external jobid 'Your job 178790 ("derep_SRR2187348") has been submitted'.
+[Mon Aug 27 13:44:51 2018]
+Finished job 500.
+6 of 1202 steps (0.50%) done
+
+[Mon Aug 27 13:44:51 2018]
+Job 930: --- Dereplication
+
+[Mon Aug 27 13:44:51 2018]
+Finished job 333.
+7 of 1202 steps (0.58%) done
+[Mon Aug 27 13:44:51 2018]
+Finished job 183.
+8 of 1202 steps (0.67%) done
+[Mon Aug 27 13:44:51 2018]
+Finished job 12.
+9 of 1202 steps (0.75%) done
+[Mon Aug 27 13:44:51 2018]
+Finished job 66.
+10 of 1202 steps (0.83%) done
+Submitted job 930 with external jobid 'Your job 178791 ("derep_SRR2247087") has been submitted'.
+
+[Mon Aug 27 13:44:51 2018]
+Job 958: --- Dereplication
+
+Submitted job 958 with external jobid 'Your job 178792 ("derep_SRR2243797") has been submitted'.
+
+[Mon Aug 27 13:44:51 2018]
+Job 1169: --- Dereplication
+
+Submitted job 1169 with external jobid 'Your job 178793 ("derep_SRR2198982") has been submitted'.
+
+[Mon Aug 27 13:44:51 2018]
+Job 1045: --- Dereplication
+
+Submitted job 1045 with external jobid 'Your job 178794 ("derep_SRR2247080") has been submitted'.
+
+[Mon Aug 27 13:44:51 2018]
+Job 1191: --- Dereplication
+
+Submitted job 1191 with external jobid 'Your job 178795 ("derep_SRR2247432") has been submitted'.
+[Mon Aug 27 13:49:04 2018]
+Finished job 862.
+11 of 1202 steps (0.92%) done
+
+[Mon Aug 27 13:49:04 2018]
+Job 861: --- BMTagger
+
+[Mon Aug 27 13:49:04 2018]
+Finished job 1123.
+12 of 1202 steps (1.00%) done
+Submitted job 861 with external jobid 'Your job 178796 ("bmt_SRR2191162") has been submitted'.
+
+[Mon Aug 27 13:49:04 2018]
+Job 1000: --- BMTagger
+
+Submitted job 1000 with external jobid 'Your job 178797 ("bmt_SRR2198979") has been submitted'.
+[Mon Aug 27 13:49:15 2018]
+Finished job 1200.
+13 of 1202 steps (1%) done
+
+[Mon Aug 27 13:49:15 2018]
+Job 895: --- BMTagger
+
+[Mon Aug 27 13:49:15 2018]
+Finished job 1096.
+14 of 1202 steps (1%) done
+Submitted job 895 with external jobid 'Your job 178798 ("bmt_SRR2194076") has been submitted'.
+
+[Mon Aug 27 13:49:15 2018]
+Job 870: --- BMTagger
+
+Submitted job 870 with external jobid 'Your job 178799 ("bmt_SRR2187353") has been submitted'.
+[Mon Aug 27 13:49:26 2018]
+Finished job 757.
+15 of 1202 steps (1%) done
+
+[Mon Aug 27 13:49:26 2018]
+Job 758: --- BMTagger
+
+Submitted job 758 with external jobid 'Your job 178800 ("bmt_SRR2187348") has been submitted'.
+[Mon Aug 27 13:50:43 2018]
+Finished job 930.
+16 of 1202 steps (1%) done
+
+[Mon Aug 27 13:50:43 2018]
+Job 931: --- BMTagger
+
+[Mon Aug 27 13:50:43 2018]
+Finished job 958.
+17 of 1202 steps (1%) done
+[Mon Aug 27 13:50:43 2018]
+Finished job 1191.
+18 of 1202 steps (1%) done
+Submitted job 931 with external jobid 'Your job 178801 ("bmt_SRR2247087") has been submitted'.
+
+[Mon Aug 27 13:50:43 2018]
+Job 753: --- BMTagger
+
+Submitted job 753 with external jobid 'Your job 178802 ("bmt_SRR2247432") has been submitted'.
+
+[Mon Aug 27 13:50:43 2018]
+Job 957: --- BMTagger
+
+Submitted job 957 with external jobid 'Your job 178803 ("bmt_SRR2243797") has been submitted'.
+[Mon Aug 27 13:50:54 2018]
+Finished job 1045.
+19 of 1202 steps (2%) done
+
+[Mon Aug 27 13:50:54 2018]
+Job 806: --- BMTagger
+
+Submitted job 806 with external jobid 'Your job 178804 ("bmt_SRR2247080") has been submitted'.
+[Mon Aug 27 13:51:49 2018]
+Finished job 1169.
+20 of 1202 steps (2%) done
+
+[Mon Aug 27 13:51:49 2018]
+Job 926: --- BMTagger
+
+Submitted job 926 with external jobid 'Your job 178805 ("bmt_SRR2198982") has been submitted'.
+[Mon Aug 27 14:09:04 2018]
+Finished job 861.
+21 of 1202 steps (2%) done
+
+[Mon Aug 27 14:09:04 2018]
+Job 344: --- Trimmomatic
+
+Submitted job 344 with external jobid 'Your job 178820 ("trim_SRR2191162") has been submitted'.
+    [Mon Aug 27 14:09:15 2018]
+    Error in rule trimmo:
+        jobid: 344
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2191162.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191162.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191162.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191162.2.solo.fastq
+        cluster_jobid: Your job 178820 ("trim_SRR2191162") has been submitted
+
+Trying to restart job 344.
+
+[Mon Aug 27 14:09:15 2018]
+Job 344: --- Trimmomatic
+
+Submitted job 344 with external jobid 'Your job 178821 ("trim_SRR2191162") has been submitted'.
+[Mon Aug 27 14:09:59 2018]
+Finished job 758.
+22 of 1202 steps (2%) done
+
+[Mon Aug 27 14:09:59 2018]
+Job 131: --- Trimmomatic
+
+Submitted job 131 with external jobid 'Your job 178823 ("trim_SRR2187348") has been submitted'.
+[Mon Aug 27 14:10:21 2018]
+Finished job 870.
+23 of 1202 steps (2%) done
+
+[Mon Aug 27 14:10:21 2018]
+Job 216: --- Trimmomatic
+
+    [Mon Aug 27 14:10:21 2018]
+    Error in rule trimmo:
+        jobid: 131
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2187348.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187348.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187348.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187348.2.solo.fastq
+        cluster_jobid: Your job 178823 ("trim_SRR2187348") has been submitted
+
+Trying to restart job 131.
+Submitted job 216 with external jobid 'Your job 178824 ("trim_SRR2187353") has been submitted'.
+
+[Mon Aug 27 14:10:21 2018]
+Job 131: --- Trimmomatic
+
+Submitted job 131 with external jobid 'Your job 178825 ("trim_SRR2187348") has been submitted'.
+    [Mon Aug 27 14:10:32 2018]
+    Error in rule trimmo:
+        jobid: 216
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2187353.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187353.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187353.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187353.2.solo.fastq
+        cluster_jobid: Your job 178824 ("trim_SRR2187353") has been submitted
+
+Trying to restart job 216.
+
+[Mon Aug 27 14:10:32 2018]
+Job 216: --- Trimmomatic
+
+Submitted job 216 with external jobid 'Your job 178827 ("trim_SRR2187353") has been submitted'.
+[Mon Aug 27 14:10:54 2018]
+Finished job 1000.
+24 of 1202 steps (2%) done
+
+[Mon Aug 27 14:10:54 2018]
+Job 427: --- Trimmomatic
+
+Submitted job 427 with external jobid 'Your job 178828 ("trim_SRR2198979") has been submitted'.
+    [Mon Aug 27 14:11:05 2018]
+    Error in rule trimmo:
+        jobid: 427
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2198979.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198979.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198979.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198979.2.solo.fastq
+        cluster_jobid: Your job 178828 ("trim_SRR2198979") has been submitted
+
+Trying to restart job 427.
+
+[Mon Aug 27 14:11:05 2018]
+Job 427: --- Trimmomatic
+
+Submitted job 427 with external jobid 'Your job 178829 ("trim_SRR2198979") has been submitted'.
+[Mon Aug 27 14:11:38 2018]
+Finished job 895.
+25 of 1202 steps (2%) done
+
+[Mon Aug 27 14:11:38 2018]
+Job 261: --- Trimmomatic
+
+Submitted job 261 with external jobid 'Your job 178830 ("trim_SRR2194076") has been submitted'.
+    [Mon Aug 27 14:11:49 2018]
+    Error in rule trimmo:
+        jobid: 261
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2194076.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194076.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194076.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194076.2.solo.fastq
+        cluster_jobid: Your job 178830 ("trim_SRR2194076") has been submitted
+
+Trying to restart job 261.
+
+[Mon Aug 27 14:11:49 2018]
+Job 261: --- Trimmomatic
+
+Submitted job 261 with external jobid 'Your job 178831 ("trim_SRR2194076") has been submitted'.
+[Mon Aug 27 14:14:45 2018]
+Finished job 344.
+26 of 1202 steps (2%) done
+
+[Mon Aug 27 14:14:45 2018]
+Job 204: --- ReadCounts
+
+Submitted job 204 with external jobid 'Your job 178835 ("rc_SRR2191162") has been submitted'.
+[Mon Aug 27 14:15:40 2018]
+Finished job 204.
+27 of 1202 steps (2%) done
+
+[Mon Aug 27 14:15:40 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227867_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227867_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227867_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227867_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227867_unzip_done
+    jobid: 160
+    wildcards: NAME=SRR2227867
+    resources: mem_mb=10
+
+Submitted job 160 with external jobid 'Your job 178836 ("unzip_SRR2227867") has been submitted'.
+[Mon Aug 27 14:16:24 2018]
+Finished job 160.
+28 of 1202 steps (2%) done
+
+[Mon Aug 27 14:16:24 2018]
+Job 1170: --- Dereplication
+
+Submitted job 1170 with external jobid 'Your job 178837 ("derep_SRR2227867") has been submitted'.
+[Mon Aug 27 14:16:57 2018]
+Finished job 131.
+29 of 1202 steps (2%) done
+
+[Mon Aug 27 14:16:57 2018]
+Job 70: --- ReadCounts
+
+Submitted job 70 with external jobid 'Your job 178838 ("rc_SRR2187348") has been submitted'.
+[Mon Aug 27 14:17:42 2018]
+Finished job 70.
+30 of 1202 steps (2%) done
+
+[Mon Aug 27 14:17:42 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2199220_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2199220_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2199220_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199220_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199220_unzip_done
+    jobid: 695
+    wildcards: NAME=SRR2199220
+    resources: mem_mb=10
+
+Submitted job 695 with external jobid 'Your job 178839 ("unzip_SRR2199220") has been submitted'.
+[Mon Aug 27 14:18:04 2018]
+Finished job 261.
+31 of 1202 steps (3%) done
+
+[Mon Aug 27 14:18:04 2018]
+Job 720: --- ReadCounts
+
+Submitted job 720 with external jobid 'Your job 178840 ("rc_SRR2194076") has been submitted'.
+[Mon Aug 27 14:18:15 2018]
+Finished job 695.
+32 of 1202 steps (3%) done
+
+[Mon Aug 27 14:18:15 2018]
+Job 1081: --- Dereplication
+
+Submitted job 1081 with external jobid 'Your job 178841 ("derep_SRR2199220") has been submitted'.
+[Mon Aug 27 14:18:37 2018]
+Finished job 931.
+33 of 1202 steps (3%) done
+
+[Mon Aug 27 14:18:37 2018]
+Job 625: --- Trimmomatic
+
+[Mon Aug 27 14:18:37 2018]
+Finished job 957.
+34 of 1202 steps (3%) done
+Submitted job 625 with external jobid 'Your job 178842 ("trim_SRR2247087") has been submitted'.
+
+[Mon Aug 27 14:18:37 2018]
+Job 698: --- Trimmomatic
+
+Submitted job 698 with external jobid 'Your job 178843 ("trim_SRR2243797") has been submitted'.
+[Mon Aug 27 14:18:48 2018]
+Finished job 806.
+35 of 1202 steps (3%) done
+
+[Mon Aug 27 14:18:48 2018]
+Job 143: --- Trimmomatic
+
+    [Mon Aug 27 14:18:48 2018]
+    Error in rule trimmo:
+        jobid: 625
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2247087.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247087.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247087.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247087.2.solo.fastq
+        cluster_jobid: Your job 178842 ("trim_SRR2247087") has been submitted
+
+Trying to restart job 625.
+    [Mon Aug 27 14:18:48 2018]
+    Error in rule trimmo:
+        jobid: 698
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2243797.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2243797.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2243797.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2243797.2.solo.fastq
+        cluster_jobid: Your job 178843 ("trim_SRR2243797") has been submitted
+
+Trying to restart job 698.
+Submitted job 143 with external jobid 'Your job 178844 ("trim_SRR2247080") has been submitted'.
+
+[Mon Aug 27 14:18:48 2018]
+Job 698: --- Trimmomatic
+
+Submitted job 698 with external jobid 'Your job 178845 ("trim_SRR2243797") has been submitted'.
+
+[Mon Aug 27 14:18:48 2018]
+Job 625: --- Trimmomatic
+
+Submitted job 625 with external jobid 'Your job 178846 ("trim_SRR2247087") has been submitted'.
+[Mon Aug 27 14:18:59 2018]
+Finished job 720.
+36 of 1202 steps (3%) done
+
+[Mon Aug 27 14:18:59 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2194056_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2194056_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2194056_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194056_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194056_unzip_done
+    jobid: 260
+    wildcards: NAME=SRR2194056
+    resources: mem_mb=10
+
+Submitted job 260 with external jobid 'Your job 178847 ("unzip_SRR2194056") has been submitted'.
+    [Mon Aug 27 14:19:10 2018]
+    Error in rule trimmo:
+        jobid: 143
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2247080.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247080.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247080.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247080.2.solo.fastq
+        cluster_jobid: Your job 178844 ("trim_SRR2247080") has been submitted
+
+Trying to restart job 143.
+
+[Mon Aug 27 14:19:10 2018]
+Job 143: --- Trimmomatic
+
+Submitted job 143 with external jobid 'Your job 178848 ("trim_SRR2247080") has been submitted'.
+[Mon Aug 27 14:19:21 2018]
+Finished job 753.
+37 of 1202 steps (3%) done
+
+[Mon Aug 27 14:19:21 2018]
+Job 63: --- Trimmomatic
+
+Submitted job 63 with external jobid 'Your job 178849 ("trim_SRR2247432") has been submitted'.
+    [Mon Aug 27 14:19:32 2018]
+    Error in rule trimmo:
+        jobid: 63
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2247432.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247432.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247432.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247432.2.solo.fastq
+        cluster_jobid: Your job 178849 ("trim_SRR2247432") has been submitted
+
+Trying to restart job 63.
+
+[Mon Aug 27 14:19:32 2018]
+Job 63: --- Trimmomatic
+
+Submitted job 63 with external jobid 'Your job 178850 ("trim_SRR2247432") has been submitted'.
+[Mon Aug 27 14:19:54 2018]
+Finished job 260.
+38 of 1202 steps (3%) done
+
+[Mon Aug 27 14:19:54 2018]
+Job 1018: --- Dereplication
+
+Submitted job 1018 with external jobid 'Your job 178851 ("derep_SRR2194056") has been submitted'.
+[Mon Aug 27 14:20:38 2018]
+Finished job 1170.
+39 of 1202 steps (3%) done
+
+[Mon Aug 27 14:20:38 2018]
+Job 905: --- BMTagger
+
+Submitted job 905 with external jobid 'Your job 178853 ("bmt_SRR2227867") has been submitted'.
+[Mon Aug 27 14:21:00 2018]
+Finished job 216.
+40 of 1202 steps (3%) done
+
+[Mon Aug 27 14:21:00 2018]
+Job 576: --- ReadCounts
+
+Submitted job 576 with external jobid 'Your job 178854 ("rc_SRR2187353") has been submitted'.
+[Mon Aug 27 14:21:33 2018]
+Finished job 427.
+41 of 1202 steps (3%) done
+
+[Mon Aug 27 14:21:33 2018]
+Job 616: --- ReadCounts
+
+Submitted job 616 with external jobid 'Your job 178855 ("rc_SRR2198979") has been submitted'.
+[Mon Aug 27 14:21:55 2018]
+Finished job 576.
+42 of 1202 steps (3%) done
+
+[Mon Aug 27 14:21:55 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2193919_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2193919_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2193919_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193919_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193919_unzip_done
+    jobid: 388
+    wildcards: NAME=SRR2193919
+    resources: mem_mb=10
+
+Submitted job 388 with external jobid 'Your job 178857 ("unzip_SRR2193919") has been submitted'.
+[Mon Aug 27 14:22:28 2018]
+Finished job 1081.
+43 of 1202 steps (4%) done
+
+[Mon Aug 27 14:22:28 2018]
+Job 1012: --- BMTagger
+
+[Mon Aug 27 14:22:28 2018]
+Finished job 616.
+44 of 1202 steps (4%) done
+Submitted job 1012 with external jobid 'Your job 178858 ("bmt_SRR2199220") has been submitted'.
+
+[Mon Aug 27 14:22:28 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2193525_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2193525_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2193525_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193525_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193525_unzip_done
+    jobid: 278
+    wildcards: NAME=SRR2193525
+    resources: mem_mb=10
+
+Submitted job 278 with external jobid 'Your job 178859 ("unzip_SRR2193525") has been submitted'.
+[Mon Aug 27 14:22:39 2018]
+Finished job 388.
+45 of 1202 steps (4%) done
+
+[Mon Aug 27 14:22:39 2018]
+Job 1017: --- Dereplication
+
+Submitted job 1017 with external jobid 'Your job 178860 ("derep_SRR2193919") has been submitted'.
+[Mon Aug 27 14:23:12 2018]
+Finished job 278.
+46 of 1202 steps (4%) done
+
+[Mon Aug 27 14:23:12 2018]
+Job 1068: --- Dereplication
+
+Submitted job 1068 with external jobid 'Your job 178861 ("derep_SRR2193525") has been submitted'.
+[Mon Aug 27 14:24:07 2018]
+Finished job 1018.
+47 of 1202 steps (4%) done
+
+[Mon Aug 27 14:24:07 2018]
+Job 1019: --- BMTagger
+
+Submitted job 1019 with external jobid 'Your job 178862 ("bmt_SRR2194056") has been submitted'.
+[Mon Aug 27 14:25:35 2018]
+Finished job 926.
+48 of 1202 steps (4%) done
+
+[Mon Aug 27 14:25:35 2018]
+Job 306: --- Trimmomatic
+
+Submitted job 306 with external jobid 'Your job 178864 ("trim_SRR2198982") has been submitted'.
+    [Mon Aug 27 14:25:46 2018]
+    Error in rule trimmo:
+        jobid: 306
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2198982.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198982.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198982.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198982.2.solo.fastq
+        cluster_jobid: Your job 178864 ("trim_SRR2198982") has been submitted
+
+Trying to restart job 306.
+
+[Mon Aug 27 14:25:46 2018]
+Job 306: --- Trimmomatic
+
+Submitted job 306 with external jobid 'Your job 178866 ("trim_SRR2198982") has been submitted'.
+[Mon Aug 27 14:26:08 2018]
+Finished job 625.
+49 of 1202 steps (4%) done
+
+[Mon Aug 27 14:26:08 2018]
+Job 311: --- ReadCounts
+
+Submitted job 311 with external jobid 'Your job 178868 ("rc_SRR2247087") has been submitted'.
+[Mon Aug 27 14:26:41 2018]
+Finished job 1017.
+50 of 1202 steps (4%) done
+
+[Mon Aug 27 14:26:41 2018]
+Job 1016: --- BMTagger
+
+Submitted job 1016 with external jobid 'Your job 178871 ("bmt_SRR2193919") has been submitted'.
+[Mon Aug 27 14:27:14 2018]
+Finished job 1068.
+51 of 1202 steps (4%) done
+
+[Mon Aug 27 14:27:14 2018]
+Job 798: --- BMTagger
+
+[Mon Aug 27 14:27:14 2018]
+Finished job 311.
+52 of 1202 steps (4%) done
+Submitted job 798 with external jobid 'Your job 178874 ("bmt_SRR2193525") has been submitted'.
+
+[Mon Aug 27 14:27:14 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2194602_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2194602_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2194602_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194602_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194602_unzip_done
+    jobid: 424
+    wildcards: NAME=SRR2194602
+    resources: mem_mb=10
+
+Submitted job 424 with external jobid 'Your job 178875 ("unzip_SRR2194602") has been submitted'.
+[Mon Aug 27 14:27:47 2018]
+Finished job 698.
+53 of 1202 steps (4%) done
+
+[Mon Aug 27 14:27:47 2018]
+Job 355: --- ReadCounts
+
+Submitted job 355 with external jobid 'Your job 178878 ("rc_SRR2243797") has been submitted'.
+[Mon Aug 27 14:28:09 2018]
+Finished job 424.
+54 of 1202 steps (4%) done
+
+[Mon Aug 27 14:28:09 2018]
+Job 1145: --- Dereplication
+
+Submitted job 1145 with external jobid 'Your job 178879 ("derep_SRR2194602") has been submitted'.
+[Mon Aug 27 14:29:04 2018]
+Finished job 355.
+55 of 1202 steps (5%) done
+
+[Mon Aug 27 14:29:04 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2189225_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2189225_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2189225_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2189225_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2189225_unzip_done
+    jobid: 511
+    wildcards: NAME=SRR2189225
+    resources: mem_mb=10
+
+Submitted job 511 with external jobid 'Your job 178882 ("unzip_SRR2189225") has been submitted'.
+[Mon Aug 27 14:29:48 2018]
+Finished job 511.
+56 of 1202 steps (5%) done
+
+[Mon Aug 27 14:29:48 2018]
+Job 1041: --- Dereplication
+
+Submitted job 1041 with external jobid 'Your job 178884 ("derep_SRR2189225") has been submitted'.
+[Mon Aug 27 14:32:00 2018]
+Finished job 1145.
+57 of 1202 steps (5%) done
+
+[Mon Aug 27 14:32:00 2018]
+Job 925: --- BMTagger
+
+Submitted job 925 with external jobid 'Your job 178888 ("bmt_SRR2194602") has been submitted'.
+[Mon Aug 27 14:34:01 2018]
+Finished job 143.
+58 of 1202 steps (5%) done
+
+[Mon Aug 27 14:34:01 2018]
+Job 497: --- ReadCounts
+
+[Mon Aug 27 14:34:01 2018]
+Finished job 1041.
+59 of 1202 steps (5%) done
+Submitted job 497 with external jobid 'Your job 178891 ("rc_SRR2247080") has been submitted'.
+
+[Mon Aug 27 14:34:01 2018]
+Job 1042: --- BMTagger
+
+Submitted job 1042 with external jobid 'Your job 178892 ("bmt_SRR2189225") has been submitted'.
+[Mon Aug 27 14:34:23 2018]
+Finished job 63.
+60 of 1202 steps (5%) done
+
+[Mon Aug 27 14:34:23 2018]
+Job 711: --- ReadCounts
+
+Submitted job 711 with external jobid 'Your job 178893 ("rc_SRR2247432") has been submitted'.
+[Mon Aug 27 14:35:19 2018]
+Finished job 497.
+61 of 1202 steps (5%) done
+
+[Mon Aug 27 14:35:19 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227862_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227862_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227862_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227862_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227862_unzip_done
+    jobid: 541
+    wildcards: NAME=SRR2227862
+    resources: mem_mb=10
+
+Submitted job 541 with external jobid 'Your job 178894 ("unzip_SRR2227862") has been submitted'.
+[Mon Aug 27 14:35:30 2018]
+Finished job 306.
+62 of 1202 steps (5%) done
+
+[Mon Aug 27 14:35:30 2018]
+Job 683: --- ReadCounts
+
+[Mon Aug 27 14:35:30 2018]
+Finished job 711.
+63 of 1202 steps (5%) done
+Submitted job 683 with external jobid 'Your job 178895 ("rc_SRR2198982") has been submitted'.
+
+[Mon Aug 27 14:35:30 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227830_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227830_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227830_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227830_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227830_unzip_done
+    jobid: 479
+    wildcards: NAME=SRR2227830
+    resources: mem_mb=10
+
+Submitted job 479 with external jobid 'Your job 178896 ("unzip_SRR2227830") has been submitted'.
+[Mon Aug 27 14:36:03 2018]
+Finished job 541.
+64 of 1202 steps (5%) done
+
+[Mon Aug 27 14:36:03 2018]
+Job 793: --- Dereplication
+
+Submitted job 793 with external jobid 'Your job 178898 ("derep_SRR2227862") has been submitted'.
+[Mon Aug 27 14:36:25 2018]
+Finished job 479.
+65 of 1202 steps (5%) done
+
+[Mon Aug 27 14:36:25 2018]
+Job 741: --- Dereplication
+
+Submitted job 741 with external jobid 'Your job 178899 ("derep_SRR2227830") has been submitted'.
+[Mon Aug 27 14:36:58 2018]
+Finished job 683.
+66 of 1202 steps (5%) done
+
+[Mon Aug 27 14:36:58 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227900_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227900_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227900_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227900_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227900_unzip_done
+    jobid: 21
+    wildcards: NAME=SRR2227900
+    resources: mem_mb=10
+
+Submitted job 21 with external jobid 'Your job 178900 ("unzip_SRR2227900") has been submitted'.
+[Mon Aug 27 14:37:42 2018]
+Finished job 21.
+67 of 1202 steps (6%) done
+
+[Mon Aug 27 14:37:42 2018]
+Job 1157: --- Dereplication
+
+Submitted job 1157 with external jobid 'Your job 178901 ("derep_SRR2227900") has been submitted'.
+[Mon Aug 27 14:40:05 2018]
+Finished job 793.
+68 of 1202 steps (6%) done
+
+[Mon Aug 27 14:40:05 2018]
+Job 794: --- BMTagger
+
+Submitted job 794 with external jobid 'Your job 178906 ("bmt_SRR2227862") has been submitted'.
+[Mon Aug 27 14:40:16 2018]
+Finished job 741.
+69 of 1202 steps (6%) done
+
+[Mon Aug 27 14:40:16 2018]
+Job 740: --- BMTagger
+
+Submitted job 740 with external jobid 'Your job 178907 ("bmt_SRR2227830") has been submitted'.
+[Mon Aug 27 14:41:11 2018]
+Finished job 905.
+70 of 1202 steps (6%) done
+
+[Mon Aug 27 14:41:11 2018]
+Job 270: --- Trimmomatic
+
+Submitted job 270 with external jobid 'Your job 178908 ("trim_SRR2227867") has been submitted'.
+[Mon Aug 27 14:41:22 2018]
+Finished job 1157.
+71 of 1202 steps (6%) done
+
+    [Mon Aug 27 14:41:22 2018]
+[Mon Aug 27 14:41:22 2018]
+    Error in rule trimmo:
+Job 937: --- BMTagger
+        jobid: 270
+
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2227867.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227867.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227867.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227867.2.solo.fastq
+        cluster_jobid: Your job 178908 ("trim_SRR2227867") has been submitted
+
+Trying to restart job 270.
+Submitted job 937 with external jobid 'Your job 178909 ("bmt_SRR2227900") has been submitted'.
+
+[Mon Aug 27 14:41:22 2018]
+Job 270: --- Trimmomatic
+
+Submitted job 270 with external jobid 'Your job 178910 ("trim_SRR2227867") has been submitted'.
+[Mon Aug 27 14:44:07 2018]
+Finished job 1019.
+72 of 1202 steps (6%) done
+
+[Mon Aug 27 14:44:07 2018]
+Job 568: --- Trimmomatic
+
+Submitted job 568 with external jobid 'Your job 178915 ("trim_SRR2194056") has been submitted'.
+    [Mon Aug 27 14:44:18 2018]
+    Error in rule trimmo:
+        jobid: 568
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2194056.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194056.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194056.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194056.2.solo.fastq
+        cluster_jobid: Your job 178915 ("trim_SRR2194056") has been submitted
+
+Trying to restart job 568.
+
+[Mon Aug 27 14:44:18 2018]
+Job 568: --- Trimmomatic
+
+Submitted job 568 with external jobid 'Your job 178916 ("trim_SRR2194056") has been submitted'.
+[Mon Aug 27 14:44:40 2018]
+Finished job 1012.
+73 of 1202 steps (6%) done
+
+[Mon Aug 27 14:44:40 2018]
+Job 448: --- Trimmomatic
+
+Submitted job 448 with external jobid 'Your job 178917 ("trim_SRR2199220") has been submitted'.
+    [Mon Aug 27 14:44:51 2018]
+    Error in rule trimmo:
+        jobid: 448
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2199220.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199220.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199220.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199220.2.solo.fastq
+        cluster_jobid: Your job 178917 ("trim_SRR2199220") has been submitted
+
+Trying to restart job 448.
+
+[Mon Aug 27 14:44:51 2018]
+Job 448: --- Trimmomatic
+
+Submitted job 448 with external jobid 'Your job 178918 ("trim_SRR2199220") has been submitted'.
+[Mon Aug 27 14:46:41 2018]
+Finished job 270.
+74 of 1202 steps (6%) done
+
+[Mon Aug 27 14:46:41 2018]
+Job 685: --- ReadCounts
+
+Submitted job 685 with external jobid 'Your job 178919 ("rc_SRR2227867") has been submitted'.
+[Mon Aug 27 14:47:25 2018]
+Finished job 685.
+75 of 1202 steps (6%) done
+
+[Mon Aug 27 14:47:25 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2187354_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2187354_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2187354_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187354_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187354_unzip_done
+    jobid: 176
+    wildcards: NAME=SRR2187354
+    resources: mem_mb=10
+
+Submitted job 176 with external jobid 'Your job 178920 ("unzip_SRR2187354") has been submitted'.
+[Mon Aug 27 14:47:36 2018]
+Finished job 1016.
+76 of 1202 steps (6%) done
+
+[Mon Aug 27 14:47:36 2018]
+Job 618: --- Trimmomatic
+
+[Mon Aug 27 14:47:36 2018]
+Finished job 798.
+77 of 1202 steps (6%) done
+Submitted job 618 with external jobid 'Your job 178921 ("trim_SRR2193919") has been submitted'.
+
+[Mon Aug 27 14:47:36 2018]
+Job 129: --- Trimmomatic
+
+Submitted job 129 with external jobid 'Your job 178922 ("trim_SRR2193525") has been submitted'.
+    [Mon Aug 27 14:47:47 2018]
+    Error in rule trimmo:
+        jobid: 618
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2193919.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193919.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193919.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193919.2.solo.fastq
+        cluster_jobid: Your job 178921 ("trim_SRR2193919") has been submitted
+
+Trying to restart job 618.
+
+    [Mon Aug 27 14:47:47 2018]
+[Mon Aug 27 14:47:47 2018]
+    Error in rule trimmo:
+Job 618: --- Trimmomatic
+        jobid: 129
+
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2193525.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193525.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193525.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193525.2.solo.fastq
+        cluster_jobid: Your job 178922 ("trim_SRR2193525") has been submitted
+
+Trying to restart job 129.
+Submitted job 618 with external jobid 'Your job 178923 ("trim_SRR2193919") has been submitted'.
+
+[Mon Aug 27 14:47:47 2018]
+Job 129: --- Trimmomatic
+
+Submitted job 129 with external jobid 'Your job 178924 ("trim_SRR2193525") has been submitted'.
+[Mon Aug 27 14:48:09 2018]
+Finished job 176.
+78 of 1202 steps (6%) done
+
+[Mon Aug 27 14:48:09 2018]
+Job 1003: --- Dereplication
+
+Submitted job 1003 with external jobid 'Your job 178925 ("derep_SRR2187354") has been submitted'.
+[Mon Aug 27 14:49:26 2018]
+Finished job 568.
+79 of 1202 steps (7%) done
+
+[Mon Aug 27 14:49:26 2018]
+Job 456: --- ReadCounts
+
+Submitted job 456 with external jobid 'Your job 178926 ("rc_SRR2194056") has been submitted'.
+[Mon Aug 27 14:50:10 2018]
+Finished job 456.
+80 of 1202 steps (7%) done
+
+[Mon Aug 27 14:50:10 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2193568_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2193568_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2193568_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193568_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193568_unzip_done
+    jobid: 617
+    wildcards: NAME=SRR2193568
+    resources: mem_mb=10
+
+Submitted job 617 with external jobid 'Your job 178927 ("unzip_SRR2193568") has been submitted'.
+[Mon Aug 27 14:50:43 2018]
+Finished job 448.
+81 of 1202 steps (7%) done
+
+[Mon Aug 27 14:50:43 2018]
+Job 549: --- ReadCounts
+
+Submitted job 549 with external jobid 'Your job 178928 ("rc_SRR2199220") has been submitted'.
+[Mon Aug 27 14:50:54 2018]
+Finished job 617.
+82 of 1202 steps (7%) done
+
+[Mon Aug 27 14:50:54 2018]
+Job 961: --- Dereplication
+
+Submitted job 961 with external jobid 'Your job 178929 ("derep_SRR2193568") has been submitted'.
+[Mon Aug 27 14:51:27 2018]
+Finished job 549.
+83 of 1202 steps (7%) done
+
+[Mon Aug 27 14:51:27 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2244035_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2244035_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2244035_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2244035_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2244035_unzip_done
+    jobid: 46
+    wildcards: NAME=SRR2244035
+    resources: mem_mb=10
+
+Submitted job 46 with external jobid 'Your job 178930 ("unzip_SRR2244035") has been submitted'.
+[Mon Aug 27 14:52:00 2018]
+Finished job 46.
+84 of 1202 steps (7%) done
+
+[Mon Aug 27 14:52:00 2018]
+Job 1050: --- Dereplication
+
+Submitted job 1050 with external jobid 'Your job 178931 ("derep_SRR2244035") has been submitted'.
+[Mon Aug 27 14:52:11 2018]
+Finished job 1003.
+85 of 1202 steps (7%) done
+
+[Mon Aug 27 14:52:11 2018]
+Job 864: --- BMTagger
+
+Submitted job 864 with external jobid 'Your job 178932 ("bmt_SRR2187354") has been submitted'.
+[Mon Aug 27 14:52:44 2018]
+Finished job 925.
+86 of 1202 steps (7%) done
+
+[Mon Aug 27 14:52:44 2018]
+Job 305: --- Trimmomatic
+
+Submitted job 305 with external jobid 'Your job 178933 ("trim_SRR2194602") has been submitted'.
+    [Mon Aug 27 14:53:06 2018]
+    Error in rule trimmo:
+        jobid: 305
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2194602.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194602.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194602.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194602.2.solo.fastq
+        cluster_jobid: Your job 178933 ("trim_SRR2194602") has been submitted
+
+Trying to restart job 305.
+
+[Mon Aug 27 14:53:06 2018]
+Job 305: --- Trimmomatic
+
+Submitted job 305 with external jobid 'Your job 178934 ("trim_SRR2194602") has been submitted'.
+[Mon Aug 27 14:53:28 2018]
+Finished job 129.
+87 of 1202 steps (7%) done
+
+[Mon Aug 27 14:53:28 2018]
+Job 526: --- ReadCounts
+
+Submitted job 526 with external jobid 'Your job 178935 ("rc_SRR2193525") has been submitted'.
+[Mon Aug 27 14:53:50 2018]
+Finished job 618.
+88 of 1202 steps (7%) done
+
+[Mon Aug 27 14:53:50 2018]
+Job 455: --- ReadCounts
+
+Submitted job 455 with external jobid 'Your job 178936 ("rc_SRR2193919") has been submitted'.
+[Mon Aug 27 14:54:12 2018]
+Finished job 526.
+89 of 1202 steps (7%) done
+
+[Mon Aug 27 14:54:12 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227932_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227932_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227932_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227932_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227932_unzip_done
+    jobid: 258
+    wildcards: NAME=SRR2227932
+    resources: mem_mb=10
+
+Submitted job 258 with external jobid 'Your job 178937 ("unzip_SRR2227932") has been submitted'.
+[Mon Aug 27 14:54:34 2018]
+Finished job 1042.
+90 of 1202 steps (7%) done
+
+[Mon Aug 27 14:54:34 2018]
+Job 525: --- Trimmomatic
+
+[Mon Aug 27 14:54:34 2018]
+Finished job 455.
+91 of 1202 steps (8%) done
+Submitted job 525 with external jobid 'Your job 178938 ("trim_SRR2189225") has been submitted'.
+
+[Mon Aug 27 14:54:34 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2187355_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2187355_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2187355_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187355_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187355_unzip_done
+    jobid: 418
+    wildcards: NAME=SRR2187355
+    resources: mem_mb=10
+
+Submitted job 418 with external jobid 'Your job 178939 ("unzip_SRR2187355") has been submitted'.
+[Mon Aug 27 14:54:45 2018]
+Finished job 961.
+92 of 1202 steps (8%) done
+
+[Mon Aug 27 14:54:45 2018]
+Job 962: --- BMTagger
+
+[Mon Aug 27 14:54:45 2018]
+Finished job 258.
+93 of 1202 steps (8%) done
+    [Mon Aug 27 14:54:45 2018]
+    Error in rule trimmo:
+        jobid: 525
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2189225.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2189225.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2189225.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2189225.2.solo.fastq
+        cluster_jobid: Your job 178938 ("trim_SRR2189225") has been submitted
+
+Trying to restart job 525.
+Submitted job 962 with external jobid 'Your job 178940 ("bmt_SRR2193568") has been submitted'.
+
+[Mon Aug 27 14:54:46 2018]
+Job 525: --- Trimmomatic
+
+Submitted job 525 with external jobid 'Your job 178941 ("trim_SRR2189225") has been submitted'.
+
+[Mon Aug 27 14:54:46 2018]
+Job 1110: --- Dereplication
+
+Submitted job 1110 with external jobid 'Your job 178942 ("derep_SRR2227932") has been submitted'.
+[Mon Aug 27 14:55:30 2018]
+Finished job 418.
+94 of 1202 steps (8%) done
+
+[Mon Aug 27 14:55:30 2018]
+Job 1151: --- Dereplication
+
+Submitted job 1151 with external jobid 'Your job 178943 ("derep_SRR2187355") has been submitted'.
+[Mon Aug 27 14:56:03 2018]
+Finished job 1050.
+95 of 1202 steps (8%) done
+
+[Mon Aug 27 14:56:03 2018]
+Job 1049: --- BMTagger
+
+Submitted job 1049 with external jobid 'Your job 178944 ("bmt_SRR2244035") has been submitted'.
+[Mon Aug 27 14:58:15 2018]
+Finished job 305.
+96 of 1202 steps (8%) done
+
+[Mon Aug 27 14:58:15 2018]
+Job 649: --- ReadCounts
+
+Submitted job 649 with external jobid 'Your job 178945 ("rc_SRR2194602") has been submitted'.
+[Mon Aug 27 14:58:48 2018]
+Finished job 1110.
+97 of 1202 steps (8%) done
+
+[Mon Aug 27 14:58:48 2018]
+Job 1088: --- BMTagger
+
+Submitted job 1088 with external jobid 'Your job 178946 ("bmt_SRR2227932") has been submitted'.
+[Mon Aug 27 14:59:10 2018]
+Finished job 649.
+98 of 1202 steps (8%) done
+
+[Mon Aug 27 14:59:10 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2191167_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2191167_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2191167_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191167_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191167_unzip_done
+    jobid: 426
+    wildcards: NAME=SRR2191167
+    resources: mem_mb=10
+
+Submitted job 426 with external jobid 'Your job 178947 ("unzip_SRR2191167") has been submitted'.
+[Mon Aug 27 14:59:21 2018]
+Finished job 1151.
+99 of 1202 steps (8%) done
+
+[Mon Aug 27 14:59:21 2018]
+Job 909: --- BMTagger
+
+Submitted job 909 with external jobid 'Your job 178948 ("bmt_SRR2187355") has been submitted'.
+[Mon Aug 27 14:59:43 2018]
+Finished job 794.
+100 of 1202 steps (8%) done
+
+[Mon Aug 27 14:59:43 2018]
+Job 405: --- Trimmomatic
+
+[Mon Aug 27 14:59:43 2018]
+Finished job 740.
+101 of 1202 steps (8%) done
+[Mon Aug 27 14:59:43 2018]
+Finished job 426.
+102 of 1202 steps (8%) done
+Submitted job 405 with external jobid 'Your job 178949 ("trim_SRR2227862") has been submitted'.
+
+[Mon Aug 27 14:59:43 2018]
+Job 1071: --- Dereplication
+
+Submitted job 1071 with external jobid 'Your job 178950 ("derep_SRR2191167") has been submitted'.
+
+[Mon Aug 27 14:59:43 2018]
+Job 420: --- Trimmomatic
+
+Submitted job 420 with external jobid 'Your job 178951 ("trim_SRR2227830") has been submitted'.
+[Mon Aug 27 14:59:54 2018]
+Finished job 937.
+103 of 1202 steps (9%) done
+    [Mon Aug 27 14:59:54 2018]
+
+    Error in rule trimmo:
+[Mon Aug 27 14:59:54 2018]
+        jobid: 405
+Job 317: --- Trimmomatic
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2227862.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227862.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227862.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227862.2.solo.fastq
+
+        cluster_jobid: Your job 178949 ("trim_SRR2227862") has been submitted
+
+Trying to restart job 405.
+    [Mon Aug 27 14:59:54 2018]
+    Error in rule trimmo:
+        jobid: 420
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2227830.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227830.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227830.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227830.2.solo.fastq
+        cluster_jobid: Your job 178951 ("trim_SRR2227830") has been submitted
+
+Trying to restart job 420.
+Submitted job 317 with external jobid 'Your job 178952 ("trim_SRR2227900") has been submitted'.
+
+[Mon Aug 27 14:59:54 2018]
+Job 420: --- Trimmomatic
+
+Submitted job 420 with external jobid 'Your job 178953 ("trim_SRR2227830") has been submitted'.
+
+[Mon Aug 27 14:59:54 2018]
+Job 405: --- Trimmomatic
+
+Submitted job 405 with external jobid 'Your job 178954 ("trim_SRR2227862") has been submitted'.
+    [Mon Aug 27 15:00:05 2018]
+    Error in rule trimmo:
+        jobid: 317
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2227900.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227900.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227900.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227900.2.solo.fastq
+        cluster_jobid: Your job 178952 ("trim_SRR2227900") has been submitted
+
+Trying to restart job 317.
+
+[Mon Aug 27 15:00:05 2018]
+Job 317: --- Trimmomatic
+
+Submitted job 317 with external jobid 'Your job 178955 ("trim_SRR2227900") has been submitted'.
+[Mon Aug 27 15:03:45 2018]
+Finished job 1071.
+104 of 1202 steps (9%) done
+
+[Mon Aug 27 15:03:45 2018]
+Job 910: --- BMTagger
+
+Submitted job 910 with external jobid 'Your job 178975 ("bmt_SRR2191167") has been submitted'.
+[Mon Aug 27 15:04:40 2018]
+Finished job 525.
+105 of 1202 steps (9%) done
+
+[Mon Aug 27 15:04:40 2018]
+Job 492: --- ReadCounts
+
+Submitted job 492 with external jobid 'Your job 178983 ("rc_SRR2189225") has been submitted'.
+[Mon Aug 27 15:05:24 2018]
+Finished job 492.
+106 of 1202 steps (9%) done
+
+[Mon Aug 27 15:05:24 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2198950_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2198950_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2198950_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198950_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2198950_unzip_done
+    jobid: 291
+    wildcards: NAME=SRR2198950
+    resources: mem_mb=10
+
+Submitted job 291 with external jobid 'Your job 178989 ("unzip_SRR2198950") has been submitted'.
+[Mon Aug 27 15:05:35 2018]
+Finished job 405.
+107 of 1202 steps (9%) done
+
+[Mon Aug 27 15:05:35 2018]
+Job 117: --- ReadCounts
+
+Submitted job 117 with external jobid 'Your job 178994 ("rc_SRR2227862") has been submitted'.
+[Mon Aug 27 15:05:46 2018]
+Finished job 420.
+108 of 1202 steps (9%) done
+
+[Mon Aug 27 15:05:46 2018]
+Job 36: --- ReadCounts
+
+Submitted job 36 with external jobid 'Your job 178995 ("rc_SRR2227830") has been submitted'.
+[Mon Aug 27 15:06:08 2018]
+Finished job 291.
+109 of 1202 steps (9%) done
+
+[Mon Aug 27 15:06:08 2018]
+Job 923: --- Dereplication
+
+Submitted job 923 with external jobid 'Your job 179001 ("derep_SRR2198950") has been submitted'.
+[Mon Aug 27 15:06:30 2018]
+Finished job 117.
+110 of 1202 steps (9%) done
+
+[Mon Aug 27 15:06:30 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2194874_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2194874_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2194874_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194874_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194874_unzip_done
+    jobid: 98
+    wildcards: NAME=SRR2194874
+    resources: mem_mb=10
+
+Submitted job 98 with external jobid 'Your job 179002 ("unzip_SRR2194874") has been submitted'.
+[Mon Aug 27 15:06:41 2018]
+Finished job 36.
+111 of 1202 steps (9%) done
+
+[Mon Aug 27 15:06:41 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2191120_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2191120_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2191120_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191120_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191120_unzip_done
+    jobid: 51
+    wildcards: NAME=SRR2191120
+    resources: mem_mb=10
+
+Submitted job 51 with external jobid 'Your job 179003 ("unzip_SRR2191120") has been submitted'.
+[Mon Aug 27 15:07:14 2018]
+Finished job 98.
+112 of 1202 steps (9%) done
+
+[Mon Aug 27 15:07:14 2018]
+Job 1195: --- Dereplication
+
+[Mon Aug 27 15:07:14 2018]
+Finished job 51.
+113 of 1202 steps (9%) done
+Submitted job 1195 with external jobid 'Your job 179006 ("derep_SRR2194874") has been submitted'.
+
+[Mon Aug 27 15:07:14 2018]
+Job 1175: --- Dereplication
+
+Submitted job 1175 with external jobid 'Your job 179007 ("derep_SRR2191120") has been submitted'.
+[Mon Aug 27 15:09:59 2018]
+Finished job 923.
+114 of 1202 steps (9%) done
+
+[Mon Aug 27 15:09:59 2018]
+Job 726: --- BMTagger
+
+Submitted job 726 with external jobid 'Your job 179013 ("bmt_SRR2198950") has been submitted'.
+[Mon Aug 27 15:10:43 2018]
+Finished job 317.
+115 of 1202 steps (10%) done
+
+[Mon Aug 27 15:10:43 2018]
+Job 669: --- ReadCounts
+
+Submitted job 669 with external jobid 'Your job 179014 ("rc_SRR2227900") has been submitted'.
+[Mon Aug 27 15:11:05 2018]
+Finished job 1175.
+116 of 1202 steps (10%) done
+
+[Mon Aug 27 15:11:05 2018]
+Job 1069: --- BMTagger
+
+Submitted job 1069 with external jobid 'Your job 179015 ("bmt_SRR2191120") has been submitted'.
+[Mon Aug 27 15:11:16 2018]
+Finished job 1195.
+117 of 1202 steps (10%) done
+
+[Mon Aug 27 15:11:16 2018]
+Job 951: --- BMTagger
+
+Submitted job 951 with external jobid 'Your job 179016 ("bmt_SRR2194874") has been submitted'.
+[Mon Aug 27 15:11:27 2018]
+Finished job 669.
+118 of 1202 steps (10%) done
+
+[Mon Aug 27 15:11:27 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2193823_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2193823_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2193823_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193823_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193823_unzip_done
+    jobid: 533
+    wildcards: NAME=SRR2193823
+    resources: mem_mb=10
+
+Submitted job 533 with external jobid 'Your job 179017 ("unzip_SRR2193823") has been submitted'.
+[Mon Aug 27 15:12:11 2018]
+Finished job 533.
+119 of 1202 steps (10%) done
+
+[Mon Aug 27 15:12:11 2018]
+Job 759: --- Dereplication
+
+Submitted job 759 with external jobid 'Your job 179018 ("derep_SRR2193823") has been submitted'.
+[Mon Aug 27 15:14:12 2018]
+Finished job 864.
+120 of 1202 steps (10%) done
+
+[Mon Aug 27 15:14:12 2018]
+Job 206: --- Trimmomatic
+
+Submitted job 206 with external jobid 'Your job 179019 ("trim_SRR2187354") has been submitted'.
+[Mon Aug 27 15:14:23 2018]
+Finished job 962.
+121 of 1202 steps (10%) done
+    [Mon Aug 27 15:14:23 2018]
+    Error in rule trimmo:
+        jobid: 206
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2187354.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187354.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187354.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187354.2.solo.fastq
+        cluster_jobid: Your job 179019 ("trim_SRR2187354") has been submitted
+
+Trying to restart job 206.
+
+[Mon Aug 27 15:14:23 2018]
+Job 542: --- Trimmomatic
+
+Submitted job 542 with external jobid 'Your job 179021 ("trim_SRR2193568") has been submitted'.
+
+[Mon Aug 27 15:14:24 2018]
+Job 206: --- Trimmomatic
+
+Submitted job 206 with external jobid 'Your job 179022 ("trim_SRR2187354") has been submitted'.
+    [Mon Aug 27 15:14:34 2018]
+    Error in rule trimmo:
+        jobid: 542
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2193568.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193568.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193568.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193568.2.solo.fastq
+        cluster_jobid: Your job 179021 ("trim_SRR2193568") has been submitted
+
+Trying to restart job 542.
+
+[Mon Aug 27 15:14:34 2018]
+Job 542: --- Trimmomatic
+
+Submitted job 542 with external jobid 'Your job 179023 ("trim_SRR2193568") has been submitted'.
+[Mon Aug 27 15:15:41 2018]
+Finished job 759.
+122 of 1202 steps (10%) done
+
+[Mon Aug 27 15:15:41 2018]
+Job 760: --- BMTagger
+
+Submitted job 760 with external jobid 'Your job 179024 ("bmt_SRR2193823") has been submitted'.
+[Mon Aug 27 15:16:47 2018]
+Finished job 1049.
+123 of 1202 steps (10%) done
+
+[Mon Aug 27 15:16:47 2018]
+Job 630: --- Trimmomatic
+
+Submitted job 630 with external jobid 'Your job 179025 ("trim_SRR2244035") has been submitted'.
+    [Mon Aug 27 15:17:09 2018]
+    Error in rule trimmo:
+        jobid: 630
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2244035.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2244035.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2244035.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2244035.2.solo.fastq
+        cluster_jobid: Your job 179025 ("trim_SRR2244035") has been submitted
+
+Trying to restart job 630.
+
+[Mon Aug 27 15:17:09 2018]
+Job 630: --- Trimmomatic
+
+Submitted job 630 with external jobid 'Your job 179026 ("trim_SRR2244035") has been submitted'.
+[Mon Aug 27 15:18:26 2018]
+Finished job 909.
+124 of 1202 steps (10%) done
+
+[Mon Aug 27 15:18:26 2018]
+Job 280: --- Trimmomatic
+
+Submitted job 280 with external jobid 'Your job 179027 ("trim_SRR2187355") has been submitted'.
+    [Mon Aug 27 15:18:37 2018]
+    Error in rule trimmo:
+        jobid: 280
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2187355.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187355.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187355.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187355.2.solo.fastq
+        cluster_jobid: Your job 179027 ("trim_SRR2187355") has been submitted
+
+Trying to restart job 280.
+
+[Mon Aug 27 15:18:37 2018]
+Job 280: --- Trimmomatic
+
+Submitted job 280 with external jobid 'Your job 179028 ("trim_SRR2187355") has been submitted'.
+[Mon Aug 27 15:20:05 2018]
+Finished job 1088.
+125 of 1202 steps (10%) done
+
+[Mon Aug 27 15:20:05 2018]
+Job 557: --- Trimmomatic
+
+[Mon Aug 27 15:20:05 2018]
+Finished job 206.
+126 of 1202 steps (10%) done
+Submitted job 557 with external jobid 'Your job 179029 ("trim_SRR2227932") has been submitted'.
+
+[Mon Aug 27 15:20:05 2018]
+Job 434: --- ReadCounts
+
+Submitted job 434 with external jobid 'Your job 179030 ("rc_SRR2187354") has been submitted'.
+[Mon Aug 27 15:20:16 2018]
+Finished job 542.
+127 of 1202 steps (11%) done
+    [Mon Aug 27 15:20:16 2018]
+
+    Error in rule trimmo:
+[Mon Aug 27 15:20:16 2018]
+        jobid: 557
+Job 359: --- ReadCounts
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2227932.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227932.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227932.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227932.2.solo.fastq
+
+        cluster_jobid: Your job 179029 ("trim_SRR2227932") has been submitted
+
+Trying to restart job 557.
+Submitted job 359 with external jobid 'Your job 179031 ("rc_SRR2193568") has been submitted'.
+
+[Mon Aug 27 15:20:16 2018]
+Job 557: --- Trimmomatic
+
+Submitted job 557 with external jobid 'Your job 179032 ("trim_SRR2227932") has been submitted'.
+[Mon Aug 27 15:21:00 2018]
+Finished job 434.
+128 of 1202 steps (11%) done
+
+[Mon Aug 27 15:21:00 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2187351_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2187351_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2187351_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187351_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2187351_unzip_done
+    jobid: 438
+    wildcards: NAME=SRR2187351
+    resources: mem_mb=10
+
+Submitted job 438 with external jobid 'Your job 179033 ("unzip_SRR2187351") has been submitted'.
+[Mon Aug 27 15:21:11 2018]
+Finished job 359.
+129 of 1202 steps (11%) done
+
+[Mon Aug 27 15:21:11 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2193432_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2193432_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2193432_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193432_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193432_unzip_done
+    jobid: 324
+    wildcards: NAME=SRR2193432
+    resources: mem_mb=10
+
+Submitted job 324 with external jobid 'Your job 179034 ("unzip_SRR2193432") has been submitted'.
+[Mon Aug 27 15:21:44 2018]
+Finished job 438.
+130 of 1202 steps (11%) done
+
+[Mon Aug 27 15:21:44 2018]
+Job 911: --- Dereplication
+
+[Mon Aug 27 15:21:44 2018]
+Finished job 324.
+131 of 1202 steps (11%) done
+Submitted job 911 with external jobid 'Your job 179035 ("derep_SRR2187351") has been submitted'.
+
+[Mon Aug 27 15:21:44 2018]
+Job 1140: --- Dereplication
+
+Submitted job 1140 with external jobid 'Your job 179036 ("derep_SRR2193432") has been submitted'.
+[Mon Aug 27 15:24:29 2018]
+Finished job 910.
+132 of 1202 steps (11%) done
+
+[Mon Aug 27 15:24:29 2018]
+Job 283: --- Trimmomatic
+
+Submitted job 283 with external jobid 'Your job 179037 ("trim_SRR2191167") has been submitted'.
+    [Mon Aug 27 15:24:51 2018]
+    Error in rule trimmo:
+        jobid: 283
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2191167.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191167.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191167.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191167.2.solo.fastq
+        cluster_jobid: Your job 179037 ("trim_SRR2191167") has been submitted
+
+Trying to restart job 283.
+
+[Mon Aug 27 15:24:51 2018]
+Job 283: --- Trimmomatic
+
+Submitted job 283 with external jobid 'Your job 179038 ("trim_SRR2191167") has been submitted'.
+[Mon Aug 27 15:25:35 2018]
+Finished job 557.
+133 of 1202 steps (11%) done
+[Mon Aug 27 15:25:35 2018]
+Finished job 911.
+134 of 1202 steps (11%) done
+
+[Mon Aug 27 15:25:35 2018]
+Job 595: --- ReadCounts
+
+[Mon Aug 27 15:25:35 2018]
+Finished job 1140.
+135 of 1202 steps (11%) done
+Submitted job 595 with external jobid 'Your job 179039 ("rc_SRR2227932") has been submitted'.
+
+[Mon Aug 27 15:25:35 2018]
+Job 808: --- BMTagger
+
+Submitted job 808 with external jobid 'Your job 179040 ("bmt_SRR2193432") has been submitted'.
+
+[Mon Aug 27 15:25:35 2018]
+Job 722: --- BMTagger
+
+Submitted job 722 with external jobid 'Your job 179041 ("bmt_SRR2187351") has been submitted'.
+[Mon Aug 27 15:26:19 2018]
+Finished job 630.
+136 of 1202 steps (11%) done
+
+[Mon Aug 27 15:26:19 2018]
+Job 503: --- ReadCounts
+
+[Mon Aug 27 15:26:19 2018]
+Finished job 595.
+137 of 1202 steps (11%) done
+Submitted job 503 with external jobid 'Your job 179042 ("rc_SRR2244035") has been submitted'.
+
+[Mon Aug 27 15:26:19 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227919_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227919_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227919_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227919_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227919_unzip_done
+    jobid: 228
+    wildcards: NAME=SRR2227919
+    resources: mem_mb=10
+
+Submitted job 228 with external jobid 'Your job 179043 ("unzip_SRR2227919") has been submitted'.
+[Mon Aug 27 15:27:03 2018]
+Finished job 503.
+138 of 1202 steps (11%) done
+
+[Mon Aug 27 15:27:03 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2245677_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2245677_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2245677_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2245677_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2245677_unzip_done
+    jobid: 457
+    wildcards: NAME=SRR2245677
+    resources: mem_mb=10
+
+[Mon Aug 27 15:27:03 2018]
+Finished job 228.
+139 of 1202 steps (12%) done
+Submitted job 457 with external jobid 'Your job 179044 ("unzip_SRR2245677") has been submitted'.
+
+[Mon Aug 27 15:27:03 2018]
+Job 1146: --- Dereplication
+
+Submitted job 1146 with external jobid 'Your job 179045 ("derep_SRR2227919") has been submitted'.
+[Mon Aug 27 15:27:47 2018]
+Finished job 457.
+140 of 1202 steps (12%) done
+
+[Mon Aug 27 15:27:47 2018]
+Job 1099: --- Dereplication
+
+Submitted job 1099 with external jobid 'Your job 179046 ("derep_SRR2245677") has been submitted'.
+[Mon Aug 27 15:27:58 2018]
+Finished job 280.
+141 of 1202 steps (12%) done
+
+[Mon Aug 27 15:27:58 2018]
+Job 659: --- ReadCounts
+
+Submitted job 659 with external jobid 'Your job 179047 ("rc_SRR2187355") has been submitted'.
+[Mon Aug 27 15:28:31 2018]
+Finished job 659.
+142 of 1202 steps (12%) done
+
+[Mon Aug 27 15:28:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227822_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227822_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227822_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227822_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227822_unzip_done
+    jobid: 189
+    wildcards: NAME=SRR2227822
+    resources: mem_mb=10
+
+Submitted job 189 with external jobid 'Your job 179048 ("unzip_SRR2227822") has been submitted'.
+[Mon Aug 27 15:29:15 2018]
+Finished job 189.
+143 of 1202 steps (12%) done
+
+[Mon Aug 27 15:29:15 2018]
+Job 949: --- Dereplication
+
+Submitted job 949 with external jobid 'Your job 179049 ("derep_SRR2227822") has been submitted'.
+[Mon Aug 27 15:29:37 2018]
+Finished job 726.
+144 of 1202 steps (12%) done
+
+[Mon Aug 27 15:29:37 2018]
+Job 7: --- Trimmomatic
+
+Submitted job 7 with external jobid 'Your job 179050 ("trim_SRR2198950") has been submitted'.
+    [Mon Aug 27 15:29:48 2018]
+    Error in rule trimmo:
+        jobid: 7
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2198950.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198950.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198950.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2198950.2.solo.fastq
+        cluster_jobid: Your job 179050 ("trim_SRR2198950") has been submitted
+
+Trying to restart job 7.
+
+[Mon Aug 27 15:29:48 2018]
+Job 7: --- Trimmomatic
+
+Submitted job 7 with external jobid 'Your job 179051 ("trim_SRR2198950") has been submitted'.
+[Mon Aug 27 15:30:54 2018]
+Finished job 1069.
+145 of 1202 steps (12%) done
+
+[Mon Aug 27 15:30:54 2018]
+Job 527: --- Trimmomatic
+
+[Mon Aug 27 15:30:54 2018]
+Finished job 1146.
+146 of 1202 steps (12%) done
+Submitted job 527 with external jobid 'Your job 179052 ("trim_SRR2191120") has been submitted'.
+
+[Mon Aug 27 15:30:54 2018]
+Job 783: --- BMTagger
+
+Submitted job 783 with external jobid 'Your job 179053 ("bmt_SRR2227919") has been submitted'.
+    [Mon Aug 27 15:31:05 2018]
+    Error in rule trimmo:
+        jobid: 527
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2191120.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191120.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191120.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191120.2.solo.fastq
+        cluster_jobid: Your job 179052 ("trim_SRR2191120") has been submitted
+
+Trying to restart job 527.
+
+[Mon Aug 27 15:31:05 2018]
+Job 527: --- Trimmomatic
+
+Submitted job 527 with external jobid 'Your job 179054 ("trim_SRR2191120") has been submitted'.
+[Mon Aug 27 15:31:27 2018]
+Finished job 951.
+147 of 1202 steps (12%) done
+
+[Mon Aug 27 15:31:27 2018]
+Job 341: --- Trimmomatic
+
+Submitted job 341 with external jobid 'Your job 179055 ("trim_SRR2194874") has been submitted'.
+[Mon Aug 27 15:31:38 2018]
+Finished job 1099.
+148 of 1202 steps (12%) done
+
+[Mon Aug 27 15:31:38 2018]
+Job 1100: --- BMTagger
+
+    [Mon Aug 27 15:31:38 2018]
+    Error in rule trimmo:
+        jobid: 341
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2194874.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194874.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194874.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194874.2.solo.fastq
+        cluster_jobid: Your job 179055 ("trim_SRR2194874") has been submitted
+
+Trying to restart job 341.
+Submitted job 1100 with external jobid 'Your job 179056 ("bmt_SRR2245677") has been submitted'.
+
+[Mon Aug 27 15:31:38 2018]
+Job 341: --- Trimmomatic
+
+Submitted job 341 with external jobid 'Your job 179057 ("trim_SRR2194874") has been submitted'.
+[Mon Aug 27 15:33:06 2018]
+Finished job 949.
+149 of 1202 steps (12%) done
+
+[Mon Aug 27 15:33:06 2018]
+Job 948: --- BMTagger
+
+Submitted job 948 with external jobid 'Your job 179058 ("bmt_SRR2227822") has been submitted'.
+[Mon Aug 27 15:33:39 2018]
+Finished job 283.
+150 of 1202 steps (12%) done
+
+[Mon Aug 27 15:33:39 2018]
+Job 529: --- ReadCounts
+
+Submitted job 529 with external jobid 'Your job 179059 ("rc_SRR2191167") has been submitted'.
+[Mon Aug 27 15:34:24 2018]
+Finished job 529.
+151 of 1202 steps (13%) done
+
+[Mon Aug 27 15:34:24 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2247143_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2247143_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2247143_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247143_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2247143_unzip_done
+    jobid: 240
+    wildcards: NAME=SRR2247143
+    resources: mem_mb=10
+
+Submitted job 240 with external jobid 'Your job 179060 ("unzip_SRR2247143") has been submitted'.
+[Mon Aug 27 15:35:08 2018]
+Finished job 240.
+152 of 1202 steps (13%) done
+
+[Mon Aug 27 15:35:08 2018]
+Job 789: --- Dereplication
+
+Submitted job 789 with external jobid 'Your job 179061 ("derep_SRR2247143") has been submitted'.
+[Mon Aug 27 15:35:41 2018]
+Finished job 760.
+153 of 1202 steps (13%) done
+
+[Mon Aug 27 15:35:41 2018]
+Job 551: --- Trimmomatic
+
+Submitted job 551 with external jobid 'Your job 179062 ("trim_SRR2193823") has been submitted'.
+    [Mon Aug 27 15:35:52 2018]
+    Error in rule trimmo:
+        jobid: 551
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2193823.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193823.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193823.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193823.2.solo.fastq
+        cluster_jobid: Your job 179062 ("trim_SRR2193823") has been submitted
+
+Trying to restart job 551.
+
+[Mon Aug 27 15:35:52 2018]
+Job 551: --- Trimmomatic
+
+Submitted job 551 with external jobid 'Your job 179063 ("trim_SRR2193823") has been submitted'.
+[Mon Aug 27 15:36:58 2018]
+Finished job 341.
+154 of 1202 steps (13%) done
+
+[Mon Aug 27 15:36:58 2018]
+Job 715: --- ReadCounts
+
+Submitted job 715 with external jobid 'Your job 179064 ("rc_SRR2194874") has been submitted'.
+[Mon Aug 27 15:37:31 2018]
+Finished job 715.
+155 of 1202 steps (13%) done
+
+[Mon Aug 27 15:37:31 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2191481_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2191481_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2191481_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191481_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191481_unzip_done
+    jobid: 483
+    wildcards: NAME=SRR2191481
+    resources: mem_mb=10
+
+Submitted job 483 with external jobid 'Your job 179065 ("unzip_SRR2191481") has been submitted'.
+[Mon Aug 27 15:37:42 2018]
+Finished job 7.
+156 of 1202 steps (13%) done
+
+[Mon Aug 27 15:37:42 2018]
+Job 303: --- ReadCounts
+
+Submitted job 303 with external jobid 'Your job 179066 ("rc_SRR2198950") has been submitted'.
+[Mon Aug 27 15:38:15 2018]
+Finished job 483.
+157 of 1202 steps (13%) done
+
+[Mon Aug 27 15:38:15 2018]
+Job 1188: --- Dereplication
+
+Submitted job 1188 with external jobid 'Your job 179067 ("derep_SRR2191481") has been submitted'.
+[Mon Aug 27 15:38:26 2018]
+Finished job 303.
+158 of 1202 steps (13%) done
+
+[Mon Aug 27 15:38:26 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2199667_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2199667_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2199667_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199667_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199667_unzip_done
+    jobid: 608
+    wildcards: NAME=SRR2199667
+    resources: mem_mb=10
+
+Submitted job 608 with external jobid 'Your job 179068 ("unzip_SRR2199667") has been submitted'.
+[Mon Aug 27 15:38:59 2018]
+Finished job 789.
+159 of 1202 steps (13%) done
+
+[Mon Aug 27 15:38:59 2018]
+Job 790: --- BMTagger
+
+[Mon Aug 27 15:38:59 2018]
+Finished job 608.
+160 of 1202 steps (13%) done
+Submitted job 790 with external jobid 'Your job 179069 ("bmt_SRR2247143") has been submitted'.
+
+[Mon Aug 27 15:38:59 2018]
+Job 739: --- Dereplication
+
+Submitted job 739 with external jobid 'Your job 179070 ("derep_SRR2199667") has been submitted'.
+[Mon Aug 27 15:40:16 2018]
+Finished job 527.
+161 of 1202 steps (13%) done
+
+[Mon Aug 27 15:40:16 2018]
+Job 691: --- ReadCounts
+
+Submitted job 691 with external jobid 'Your job 179071 ("rc_SRR2191120") has been submitted'.
+[Mon Aug 27 15:40:49 2018]
+Finished job 551.
+162 of 1202 steps (13%) done
+
+[Mon Aug 27 15:40:49 2018]
+Job 72: --- ReadCounts
+
+Submitted job 72 with external jobid 'Your job 179072 ("rc_SRR2193823") has been submitted'.
+[Mon Aug 27 15:41:11 2018]
+Finished job 691.
+163 of 1202 steps (14%) done
+
+[Mon Aug 27 15:41:11 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2194980_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2194980_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2194980_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194980_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194980_unzip_done
+    jobid: 442
+    wildcards: NAME=SRR2194980
+    resources: mem_mb=10
+
+Submitted job 442 with external jobid 'Your job 179073 ("unzip_SRR2194980") has been submitted'.
+[Mon Aug 27 15:41:33 2018]
+Finished job 72.
+164 of 1202 steps (14%) done
+
+[Mon Aug 27 15:41:33 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2199612_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2199612_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2199612_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199612_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199612_unzip_done
+    jobid: 272
+    wildcards: NAME=SRR2199612
+    resources: mem_mb=10
+
+Submitted job 272 with external jobid 'Your job 179074 ("unzip_SRR2199612") has been submitted'.
+[Mon Aug 27 15:41:44 2018]
+Finished job 442.
+165 of 1202 steps (14%) done
+
+[Mon Aug 27 15:41:44 2018]
+Job 1015: --- Dereplication
+
+Submitted job 1015 with external jobid 'Your job 179075 ("derep_SRR2194980") has been submitted'.
+[Mon Aug 27 15:41:55 2018]
+Finished job 1188.
+166 of 1202 steps (14%) done
+
+[Mon Aug 27 15:41:55 2018]
+Job 1022: --- BMTagger
+
+Submitted job 1022 with external jobid 'Your job 179076 ("bmt_SRR2191481") has been submitted'.
+[Mon Aug 27 15:42:17 2018]
+Finished job 272.
+167 of 1202 steps (14%) done
+
+[Mon Aug 27 15:42:17 2018]
+Job 1115: --- Dereplication
+
+Submitted job 1115 with external jobid 'Your job 179077 ("derep_SRR2199612") has been submitted'.
+[Mon Aug 27 15:42:50 2018]
+Finished job 739.
+168 of 1202 steps (14%) done
+
+[Mon Aug 27 15:42:50 2018]
+Job 738: --- BMTagger
+
+Submitted job 738 with external jobid 'Your job 179078 ("bmt_SRR2199667") has been submitted'.
+[Mon Aug 27 15:45:24 2018]
+Finished job 1015.
+169 of 1202 steps (14%) done
+
+[Mon Aug 27 15:45:24 2018]
+Job 781: --- BMTagger
+
+Submitted job 781 with external jobid 'Your job 179079 ("bmt_SRR2194980") has been submitted'.
+[Mon Aug 27 15:45:46 2018]
+Finished job 1115.
+170 of 1202 steps (14%) done
+
+[Mon Aug 27 15:45:46 2018]
+Job 1028: --- BMTagger
+
+Submitted job 1028 with external jobid 'Your job 179080 ("bmt_SRR2199612") has been submitted'.
+[Mon Aug 27 15:46:19 2018]
+Finished job 808.
+171 of 1202 steps (14%) done
+
+[Mon Aug 27 15:46:19 2018]
+Job 145: --- Trimmomatic
+
+Submitted job 145 with external jobid 'Your job 179081 ("trim_SRR2193432") has been submitted'.
+[Mon Aug 27 15:46:30 2018]
+Finished job 722.
+172 of 1202 steps (14%) done
+
+    [Mon Aug 27 15:46:30 2018]
+[Mon Aug 27 15:46:30 2018]
+    Error in rule trimmo:
+Job 1: --- Trimmomatic
+        jobid: 145
+
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2193432.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193432.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193432.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2193432.2.solo.fastq
+        cluster_jobid: Your job 179081 ("trim_SRR2193432") has been submitted
+
+Trying to restart job 145.
+Submitted job 1 with external jobid 'Your job 179082 ("trim_SRR2187351") has been submitted'.
+
+[Mon Aug 27 15:46:30 2018]
+Job 145: --- Trimmomatic
+
+Submitted job 145 with external jobid 'Your job 179083 ("trim_SRR2193432") has been submitted'.
+    [Mon Aug 27 15:46:52 2018]
+    Error in rule trimmo:
+        jobid: 1
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2187351.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187351.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187351.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2187351.2.solo.fastq
+        cluster_jobid: Your job 179082 ("trim_SRR2187351") has been submitted
+
+Trying to restart job 1.
+
+[Mon Aug 27 15:46:52 2018]
+Job 1: --- Trimmomatic
+
+Submitted job 1 with external jobid 'Your job 179084 ("trim_SRR2187351") has been submitted'.
+[Mon Aug 27 15:51:38 2018]
+Finished job 145.
+173 of 1202 steps (14%) done
+
+[Mon Aug 27 15:51:38 2018]
+Job 645: --- ReadCounts
+
+Submitted job 645 with external jobid 'Your job 179085 ("rc_SRR2193432") has been submitted'.
+[Mon Aug 27 15:52:22 2018]
+Finished job 645.
+174 of 1202 steps (14%) done
+
+[Mon Aug 27 15:52:22 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2191104_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2191104_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2191104_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191104_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2191104_unzip_done
+    jobid: 331
+    wildcards: NAME=SRR2191104
+    resources: mem_mb=10
+
+Submitted job 331 with external jobid 'Your job 179086 ("unzip_SRR2191104") has been submitted'.
+[Mon Aug 27 15:52:33 2018]
+Finished job 1.
+175 of 1202 steps (15%) done
+
+[Mon Aug 27 15:52:33 2018]
+Job 284: --- ReadCounts
+
+Submitted job 284 with external jobid 'Your job 179087 ("rc_SRR2187351") has been submitted'.
+[Mon Aug 27 15:52:56 2018]
+Finished job 1100.
+176 of 1202 steps (15%) done
+
+[Mon Aug 27 15:52:56 2018]
+Job 672: --- Trimmomatic
+
+Submitted job 672 with external jobid 'Your job 179088 ("trim_SRR2245677") has been submitted'.
+[Mon Aug 27 15:53:07 2018]
+Finished job 331.
+177 of 1202 steps (15%) done
+    [Mon Aug 27 15:53:07 2018]
+    Error in rule trimmo:
+        jobid: 672
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2245677.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2245677.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2245677.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2245677.2.solo.fastq
+
+        cluster_jobid: Your job 179088 ("trim_SRR2245677") has been submitted
+[Mon Aug 27 15:53:07 2018]
+
+Job 1092: --- Dereplication
+
+Trying to restart job 672.
+Submitted job 1092 with external jobid 'Your job 179089 ("derep_SRR2191104") has been submitted'.
+
+[Mon Aug 27 15:53:07 2018]
+Job 672: --- Trimmomatic
+
+Submitted job 672 with external jobid 'Your job 179090 ("trim_SRR2245677") has been submitted'.
+[Mon Aug 27 15:53:29 2018]
+Finished job 284.
+178 of 1202 steps (15%) done
+
+[Mon Aug 27 15:53:29 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2227949_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2227949_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2227949_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227949_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2227949_unzip_done
+    jobid: 232
+    wildcards: NAME=SRR2227949
+    resources: mem_mb=10
+
+Submitted job 232 with external jobid 'Your job 179091 ("unzip_SRR2227949") has been submitted'.
+[Mon Aug 27 15:54:02 2018]
+Finished job 783.
+179 of 1202 steps (15%) done
+
+[Mon Aug 27 15:54:02 2018]
+Job 103: --- Trimmomatic
+
+Submitted job 103 with external jobid 'Your job 179092 ("trim_SRR2227919") has been submitted'.
+[Mon Aug 27 15:54:13 2018]
+Finished job 232.
+180 of 1202 steps (15%) done
+
+[Mon Aug 27 15:54:13 2018]
+Job 1002: --- Dereplication
+
+Submitted job 1002 with external jobid 'Your job 179093 ("derep_SRR2227949") has been submitted'.
+    [Mon Aug 27 15:54:24 2018]
+    Error in rule trimmo:
+        jobid: 103
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2227919.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227919.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227919.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227919.2.solo.fastq
+        cluster_jobid: Your job 179092 ("trim_SRR2227919") has been submitted
+
+Trying to restart job 103.
+
+[Mon Aug 27 15:54:24 2018]
+Job 103: --- Trimmomatic
+
+Submitted job 103 with external jobid 'Your job 179094 ("trim_SRR2227919") has been submitted'.
+[Mon Aug 27 15:54:46 2018]
+Finished job 948.
+181 of 1202 steps (15%) done
+
+[Mon Aug 27 15:54:46 2018]
+Job 578: --- Trimmomatic
+
+Submitted job 578 with external jobid 'Your job 179095 ("trim_SRR2227822") has been submitted'.
+    [Mon Aug 27 15:55:08 2018]
+    Error in rule trimmo:
+        jobid: 578
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2227822.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227822.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227822.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2227822.2.solo.fastq
+        cluster_jobid: Your job 179095 ("trim_SRR2227822") has been submitted
+
+Trying to restart job 578.
+
+[Mon Aug 27 15:55:08 2018]
+Job 578: --- Trimmomatic
+
+Submitted job 578 with external jobid 'Your job 179096 ("trim_SRR2227822") has been submitted'.
+[Mon Aug 27 15:56:47 2018]
+Finished job 1092.
+182 of 1202 steps (15%) done
+
+[Mon Aug 27 15:56:47 2018]
+Job 953: --- BMTagger
+
+Submitted job 953 with external jobid 'Your job 179097 ("bmt_SRR2191104") has been submitted'.
+[Mon Aug 27 15:57:53 2018]
+Finished job 1002.
+183 of 1202 steps (15%) done
+
+[Mon Aug 27 15:57:53 2018]
+Job 853: --- BMTagger
+
+Submitted job 853 with external jobid 'Your job 179098 ("bmt_SRR2227949") has been submitted'.
+[Mon Aug 27 15:59:10 2018]
+Finished job 790.
+184 of 1202 steps (15%) done
+
+[Mon Aug 27 15:59:10 2018]
+Job 491: --- Trimmomatic
+
+Submitted job 491 with external jobid 'Your job 179099 ("trim_SRR2247143") has been submitted'.
+    [Mon Aug 27 15:59:21 2018]
+    Error in rule trimmo:
+        jobid: 491
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2247143.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247143.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247143.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2247143.2.solo.fastq
+        cluster_jobid: Your job 179099 ("trim_SRR2247143") has been submitted
+
+Trying to restart job 491.
+
+[Mon Aug 27 15:59:21 2018]
+Job 491: --- Trimmomatic
+
+Submitted job 491 with external jobid 'Your job 179100 ("trim_SRR2247143") has been submitted'.
+[Mon Aug 27 16:01:00 2018]
+Finished job 1022.
+185 of 1202 steps (15%) done
+
+[Mon Aug 27 16:01:00 2018]
+Job 461: --- Trimmomatic
+
+Submitted job 461 with external jobid 'Your job 179101 ("trim_SRR2191481") has been submitted'.
+    [Mon Aug 27 16:01:22 2018]
+    Error in rule trimmo:
+        jobid: 461
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2191481.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191481.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191481.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2191481.2.solo.fastq
+        cluster_jobid: Your job 179101 ("trim_SRR2191481") has been submitted
+
+Trying to restart job 461.
+
+[Mon Aug 27 16:01:22 2018]
+Job 461: --- Trimmomatic
+
+Submitted job 461 with external jobid 'Your job 179102 ("trim_SRR2191481") has been submitted'.
+[Mon Aug 27 16:02:06 2018]
+Finished job 738.
+186 of 1202 steps (15%) done
+
+[Mon Aug 27 16:02:06 2018]
+Job 514: --- Trimmomatic
+
+Submitted job 514 with external jobid 'Your job 179103 ("trim_SRR2199667") has been submitted'.
+    [Mon Aug 27 16:02:17 2018]
+    Error in rule trimmo:
+        jobid: 514
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2199667.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199667.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199667.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199667.2.solo.fastq
+        cluster_jobid: Your job 179103 ("trim_SRR2199667") has been submitted
+
+Trying to restart job 514.
+
+[Mon Aug 27 16:02:17 2018]
+Job 514: --- Trimmomatic
+
+Submitted job 514 with external jobid 'Your job 179104 ("trim_SRR2199667") has been submitted'.
+[Mon Aug 27 16:02:28 2018]
+Finished job 672.
+187 of 1202 steps (16%) done
+
+[Mon Aug 27 16:02:28 2018]
+Job 581: --- ReadCounts
+
+Submitted job 581 with external jobid 'Your job 179105 ("rc_SRR2245677") has been submitted'.
+[Mon Aug 27 16:03:12 2018]
+Finished job 581.
+188 of 1202 steps (16%) done
+
+[Mon Aug 27 16:03:12 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2248005_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2248005_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2248005_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2248005_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2248005_unzip_done
+    jobid: 19
+    wildcards: NAME=SRR2248005
+    resources: mem_mb=10
+
+Submitted job 19 with external jobid 'Your job 179106 ("unzip_SRR2248005") has been submitted'.
+[Mon Aug 27 16:03:34 2018]
+Finished job 103.
+189 of 1202 steps (16%) done
+
+[Mon Aug 27 16:03:34 2018]
+Job 653: --- ReadCounts
+
+Submitted job 653 with external jobid 'Your job 179107 ("rc_SRR2227919") has been submitted'.
+[Mon Aug 27 16:03:45 2018]
+Finished job 19.
+190 of 1202 steps (16%) done
+
+[Mon Aug 27 16:03:45 2018]
+Job 839: --- Dereplication
+
+Submitted job 839 with external jobid 'Your job 179108 ("derep_SRR2248005") has been submitted'.
+[Mon Aug 27 16:04:18 2018]
+Finished job 578.
+191 of 1202 steps (16%) done
+
+[Mon Aug 27 16:04:18 2018]
+Job 336: --- ReadCounts
+
+Submitted job 336 with external jobid 'Your job 179109 ("rc_SRR2227822") has been submitted'.
+[Mon Aug 27 16:04:29 2018]
+Finished job 653.
+192 of 1202 steps (16%) done
+
+[Mon Aug 27 16:04:29 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2249082_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2249082_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2249082_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2249082_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2249082_unzip_done
+    jobid: 693
+    wildcards: NAME=SRR2249082
+    resources: mem_mb=10
+
+Submitted job 693 with external jobid 'Your job 179110 ("unzip_SRR2249082") has been submitted'.
+[Mon Aug 27 16:04:51 2018]
+Finished job 781.
+193 of 1202 steps (16%) done
+
+[Mon Aug 27 16:04:51 2018]
+Job 99: --- Trimmomatic
+
+[Mon Aug 27 16:04:51 2018]
+Finished job 491.
+194 of 1202 steps (16%) done
+Submitted job 99 with external jobid 'Your job 179111 ("trim_SRR2194980") has been submitted'.
+
+[Mon Aug 27 16:04:51 2018]
+Job 112: --- ReadCounts
+
+Submitted job 112 with external jobid 'Your job 179112 ("rc_SRR2247143") has been submitted'.
+    [Mon Aug 27 16:05:02 2018]
+    Error in rule trimmo:
+        jobid: 99
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2194980.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194980.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194980.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2194980.2.solo.fastq
+        cluster_jobid: Your job 179111 ("trim_SRR2194980") has been submitted
+
+Trying to restart job 99.
+
+[Mon Aug 27 16:05:02 2018]
+Job 99: --- Trimmomatic
+
+Submitted job 99 with external jobid 'Your job 179113 ("trim_SRR2194980") has been submitted'.
+[Mon Aug 27 16:05:13 2018]
+Finished job 336.
+195 of 1202 steps (16%) done
+
+[Mon Aug 27 16:05:13 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2199670_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2199670_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2199670_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199670_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2199670_unzip_done
+    jobid: 118
+    wildcards: NAME=SRR2199670
+    resources: mem_mb=10
+
+[Mon Aug 27 16:05:13 2018]
+Finished job 693.
+196 of 1202 steps (16%) done
+Submitted job 118 with external jobid 'Your job 179114 ("unzip_SRR2199670") has been submitted'.
+
+[Mon Aug 27 16:05:13 2018]
+Job 1128: --- Dereplication
+
+Submitted job 1128 with external jobid 'Your job 179115 ("derep_SRR2249082") has been submitted'.
+[Mon Aug 27 16:05:35 2018]
+Finished job 112.
+197 of 1202 steps (16%) done
+
+[Mon Aug 27 16:05:35 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2193858_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2193858_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2193858_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193858_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2193858_unzip_done
+    jobid: 373
+    wildcards: NAME=SRR2193858
+    resources: mem_mb=10
+
+Submitted job 373 with external jobid 'Your job 179117 ("unzip_SRR2193858") has been submitted'.
+[Mon Aug 27 16:05:57 2018]
+Finished job 118.
+198 of 1202 steps (16%) done
+
+[Mon Aug 27 16:05:57 2018]
+Job 843: --- Dereplication
+
+Submitted job 843 with external jobid 'Your job 179128 ("derep_SRR2199670") has been submitted'.
+[Mon Aug 27 16:06:30 2018]
+Finished job 373.
+199 of 1202 steps (17%) done
+
+[Mon Aug 27 16:06:30 2018]
+Job 1111: --- Dereplication
+
+Submitted job 1111 with external jobid 'Your job 179129 ("derep_SRR2193858") has been submitted'.
+[Mon Aug 27 16:07:03 2018]
+Finished job 461.
+200 of 1202 steps (17%) done
+
+[Mon Aug 27 16:07:03 2018]
+Job 708: --- ReadCounts
+
+Submitted job 708 with external jobid 'Your job 179130 ("rc_SRR2191481") has been submitted'.
+[Mon Aug 27 16:07:14 2018]
+Finished job 1028.
+201 of 1202 steps (17%) done
+
+[Mon Aug 27 16:07:14 2018]
+Job 470: --- Trimmomatic
+
+Submitted job 470 with external jobid 'Your job 179131 ("trim_SRR2199612") has been submitted'.
+[Mon Aug 27 16:07:36 2018]
+Finished job 514.
+202 of 1202 steps (17%) done
+
+[Mon Aug 27 16:07:36 2018]
+Job 35: --- ReadCounts
+
+[Mon Aug 27 16:07:36 2018]
+Finished job 839.
+203 of 1202 steps (17%) done
+    [Mon Aug 27 16:07:36 2018]
+    Error in rule trimmo:
+        jobid: 470
+        output: /workdir/data/HUGE_dataset/3-trimmo/SRR2199612.1.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199612.2.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199612.1.solo.fastq, /workdir/data/HUGE_dataset/3-trimmo/SRR2199612.2.solo.fastq
+        cluster_jobid: Your job 179131 ("trim_SRR2199612") has been submitted
+
+Trying to restart job 470.
+Submitted job 35 with external jobid 'Your job 179132 ("rc_SRR2199667") has been submitted'.
+
+[Mon Aug 27 16:07:36 2018]
+Job 470: --- Trimmomatic
+
+Submitted job 470 with external jobid 'Your job 179133 ("trim_SRR2199612") has been submitted'.
+
+[Mon Aug 27 16:07:36 2018]
+Job 838: --- BMTagger
+
+Submitted job 838 with external jobid 'Your job 179134 ("bmt_SRR2248005") has been submitted'.
+[Mon Aug 27 16:07:47 2018]
+Finished job 708.
+204 of 1202 steps (17%) done
+
+[Mon Aug 27 16:07:47 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2246741_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2246741_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2246741_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2246741_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2246741_unzip_done
+    jobid: 128
+    wildcards: NAME=SRR2246741
+    resources: mem_mb=10
+
+Submitted job 128 with external jobid 'Your job 179135 ("unzip_SRR2246741") has been submitted'.
+[Mon Aug 27 16:08:20 2018]
+Finished job 35.
+205 of 1202 steps (17%) done
+
+[Mon Aug 27 16:08:20 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2236748_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2236748_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2236748_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2236748_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2236748_unzip_done
+    jobid: 211
+    wildcards: NAME=SRR2236748
+    resources: mem_mb=10
+
+Submitted job 211 with external jobid 'Your job 179136 ("unzip_SRR2236748") has been submitted'.
+[Mon Aug 27 16:08:31 2018]
+Finished job 128.
+206 of 1202 steps (17%) done
+
+[Mon Aug 27 16:08:31 2018]
+Job 1130: --- Dereplication
+
+Submitted job 1130 with external jobid 'Your job 179137 ("derep_SRR2246741") has been submitted'.
+[Mon Aug 27 16:08:42 2018]
+Finished job 1128.
+207 of 1202 steps (17%) done
+
+[Mon Aug 27 16:08:42 2018]
+Job 840: --- BMTagger
+
+Submitted job 840 with external jobid 'Your job 179138 ("bmt_SRR2249082") has been submitted'.
+[Mon Aug 27 16:09:15 2018]
+Finished job 843.
+208 of 1202 steps (17%) done
+
+[Mon Aug 27 16:09:15 2018]
+Job 844: --- BMTagger
+
+[Mon Aug 27 16:09:15 2018]
+Finished job 211.
+209 of 1202 steps (17%) done
+Submitted job 844 with external jobid 'Your job 179139 ("bmt_SRR2199670") has been submitted'.
+
+[Mon Aug 27 16:09:15 2018]
+Job 813: --- Dereplication
+
+Submitted job 813 with external jobid 'Your job 179140 ("derep_SRR2236748") has been submitted'.
+[Mon Aug 27 16:09:59 2018]
+Finished job 99.
+210 of 1202 steps (17%) done
+
+[Mon Aug 27 16:09:59 2018]
+Job 453: --- ReadCounts
+
+Submitted job 453 with external jobid 'Your job 179141 ("rc_SRR2194980") has been submitted'.
+[Mon Aug 27 16:10:10 2018]
+Finished job 1111.
+211 of 1202 steps (18%) done
+
+[Mon Aug 27 16:10:10 2018]
+Job 754: --- BMTagger
+
+Submitted job 754 with external jobid 'Your job 179142 ("bmt_SRR2193858") has been submitted'.
+[Mon Aug 27 16:10:54 2018]
+Finished job 453.
+212 of 1202 steps (18%) done
+
+[Mon Aug 27 16:10:54 2018]
+rule gunzip:
+    input: /workdir/data/HUGE_dataset/raw_fastq/SRR2194935_1.fastq.gz, /workdir/data/HUGE_dataset/raw_fastq/SRR2194935_2.fastq.gz
+    output: /workdir/data/HUGE_dataset/0-unzipped/SRR2194935_1.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194935_2.fastq, /workdir/data/HUGE_dataset/0-unzipped/SRR2194935_unzip_done
+    jobid: 65
+    wildcards: NAME=SRR2194935
+    resources: mem_mb=10
+
+Submitted job 65 with external jobid 'Your job 179143 ("unzip_SRR2194935") has been submitted'.
+[Mon Aug 27 16:11:27 2018]
+Finished job 65.
+213 of 1202 steps (18%) done
+
+[Mon Aug 27 16:11:27 2018]
+Job 1161: --- Dereplication
+
+Submitted job 1161 with external jobid 'Your job 179144 ("derep_SRR2194935") has been submitted'.
+[Mon Aug 27 16:12:11 2018]
+Finished job 1130.
+214 of 1202 steps (18%) done
+
+[Mon Aug 27 16:12:11 2018]
+Job 729: --- BMTagger
+
+Submitted job 729 with external jobid 'Your job 179145 ("bmt_SRR2246741") has been submitted'.
+[Mon Aug 27 16:12:56 2018]
+Finished job 813.
+215 of 1202 steps (18%) done
+
+[Mon Aug 27 16:12:56 2018]
+Job 812: --- BMTagger
+
+Submitted job 812 with external jobid 'Your job 179146 ("bmt_SRR2236748") has been submitted'.

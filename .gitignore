@@ -1,1 +1,8 @@
 raw_fastq
+0-unzipped
+1-derep
+2-bmtagger
+3-trimmo
+4-readcounts
+QC/err
+QC/log

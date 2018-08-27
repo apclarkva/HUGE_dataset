@@ -1,0 +1,37 @@
+#$ -S /bin/bash
+#$ -N BWA_mem
+#$ -V
+#$ -o /workdir/users/ #Location for stdout
+#$ -e /workdir/users/ #Location for stderr
+#$ -wd /workdir/users/ #Location of your working directory
+#$ -l h_vmem=15G #How much memory your job requires, default is up to 4GB if left blank
+#$ -t 1 #The number of array jobs
+
+#This script will align data to a chosen reference as paired end reads using BWA
+
+#Set directories
+WRK=/workdir/users/
+OUT=$WRK/bwa_alignments
+if [! -e $OUT]; then mkdir -p $OUT; fi
+
+
+#Create design file of file names
+LIST=$WRK/design_files/sample_names.txt #The location and name of your "design file" or list of file names in a text/csv file
+	DESIGN=$(sed -n "${SGE_TASK_ID}p" $LIST)
+	NAME=`basename "$DESIGN"`
+
+READ1=/location/of/your/data/${NAME}.1.fastq
+READ2=/location/of/your/data/${NAME}.2.fastq
+
+#BWA mem takes the prefix of the header files
+#If you have never run this before with a specific reference, you need to index the reference first. Refer to "run_create_bwa_index.qsub"
+REF=$WRK/references/
+
+#Export the path to bwa
+export PATH=/programs/bwa-0.7.8
+
+# Align
+cd $OUT
+# This is running BWA MEM with 4 threads and -a (all). refer to the BWA manual for options
+bwa mem -a -t 4  $REF $READ1 $READ2 > ${NAME}.sam
+

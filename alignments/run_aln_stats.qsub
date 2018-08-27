@@ -1,0 +1,27 @@
+#$ -S /bin/bash
+#$ -N aln_stats
+#$ -V
+#$ -o /workdir/users/ #Location to send stdout
+#$ -e /workdir/users/ #Location to send stderr, names should be like "aln_stats.err" and "aln_stats.out"
+#$ -t 1
+#$ -wd /workdir/users/ #Your working directory
+
+#This script will calculate basic alignment stats using samtools
+
+#Set directories
+WRK=/workdir/users/ #Your directory
+OUT=/$WRK/bwa_alignments/stats
+	 if [! -e $OUT]; then mkdir -p $OUT; fi
+
+#Create design file of file names
+LIST=$WRK/design_files/ #Your design file or list of file names
+	DESIGN=$(sed -n "${SGE_TASK_ID}p" $LIST)
+	NAME=`basename "$DESIGN"`
+
+#The location of your BAM files
+BAM=$WRK/bwa_aln_bam/${NAME}.sorted.bam
+
+#Provide path to samtools
+export PATH=/programs/samtools-0.1.19
+
+samtools flagstat $BAM > $OUT/stats_${NAME}.txt

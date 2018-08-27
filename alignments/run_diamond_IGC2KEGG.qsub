@@ -1,0 +1,22 @@
+#$ -S /bin/bash
+#$ -N diamond
+#$ -V
+#$ -e /workdir/users/fnn3/scripts/LOGS/IGC/diamond.err
+#$ -wd /workdir/refdbs/IGC
+#$ -l h_vmem=35G
+#$ -q long.q@cbsubrito2
+
+#This script will blast the IGC genes against the kegg gene database
+
+
+WRK=/workdir/refdbs
+
+
+DB=$WRK/KEGG/2016/pro_euk_vir_aden_KEGG2016.pep.dmnd
+QUERY=$WRK/IGC/IGC.pep
+
+
+OUT=$WRK/IGC/IGC_to_KEGG_diamond_output.txt
+
+#Run DIAMOND
+/programs/diamond blastp -d $DB -q $QUERY -o $OUT
