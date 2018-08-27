@@ -7,7 +7,7 @@
 #$ -o /workdir/data/HUGE_dataset/QC/log/snakemake_$JOB_ID.out
 #$ -wd /workdir/data/HUGE_dataset
 #$ -l h_vmem=1G
-#$ -q long.q@cbsubrito2
+#$ -q long.q@cbsubrito
 
 #this script launches snakemake for our metagenomic QC
 #you will need to set up a folder that has raw_fastq with your raw fastq files read 1 and read 2
@@ -31,4 +31,4 @@ ERR=/workdir/data/HUGE_dataset/QC/err/ #change this
 
 
 #and remember to change your snake file so it points to your directory first main line with samples
-snakemake -s $SNAKEFILE --restart-times $RESTARTS --jobs $JOBS --cluster "qsub -q long.q@cbsubrito2 -S /bin/bash -e $ERR -o $LOG -N {params.n} -l h_vmem={resources.mem_mb}G"
+snakemake -s $SNAKEFILE --restart-times $RESTARTS --jobs $JOBS --cluster "qsub -q long.q@cbsubrito -S /bin/bash -e $ERR -o $LOG -N {params.n} -l h_vmem={resources.mem_mb}G"
