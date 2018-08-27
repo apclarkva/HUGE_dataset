@@ -1,8 +1,8 @@
 ##-----------------------------------------------------------------------------------##
 ## The list of samples to be processed
 ##-----------------------------------------------------------------------------------##
-BASE="/workdir/users/agk85/gates/gates_QC/round1/lane1"
-SAMPLES, = glob_wildcards(BASE + "/raw_fastq/{NAME}_R1.fastq.gz")
+BASE="/workdir/data/HUGE_dataset"
+SAMPLES, = glob_wildcards(BASE + "/raw_fastq/{NAME}_1.fastq.gz")
 NB_SAMPLES = len(SAMPLES)
 
 rule final:

@@ -2,9 +2,10 @@
 #$ -N snake_qc
 #$ -V
 #$ -t 1
-#$ -e /workdir/users/agk85/gates/gates_QC/round1/lane1/err/snakemake_$JOB_ID.err
-#$ -o /workdir/users/agk85/gates/gates_QC/round1/lane1/log/snakemake_$JOB_ID.out
-#$ -wd /workdir/users/agk85/gates/gates_QC/round1/lane1
+#$ -pe parenv 10
+#$ -e /workdir/users/apc223/HUGE_dataset/snakemake_$JOB_ID.err
+#$ -o /workdir/users/apc223/HUGE_dataset/snakemake_$JOB_ID.out
+#$ -wd /workdir/data/HUGE_dataset
 #$ -l h_vmem=1G
 #$ -q long.q@cbsubrito2
 
@@ -22,13 +23,12 @@
 #then run this: snakemake -s Snake_qc -unlock
 #should unlock the run directory
 
-SNAKEFILE=/workdir/scripts/Snake_qc #so change this after you move the snakefile
+SNAKEFILE=//workdir/data/HUGE_dataset/QC/Snake_qc #so change this after you move the snakefile
 RESTARTS=5
-JOBS=10 # max number of jobs you want runnint at a given time
-LOG=/workdir/users/agk85/gates/gates_QC/log #change this
-ERR=/workdir/users/agk85/gates/gates_QC/err #change this
+JOBS=10 # max number of jobs you want running at a given time
+LOG=/workdir/users/apc223/HUGE_dataset/ #change this
+ERR=/workdir/users/apc223/HUGE_dataset/ #change this
 
 
 #and remember to change your snake file so it points to your directory first main line with samples
 snakemake -s $SNAKEFILE --restart-times $RESTARTS --jobs $JOBS --cluster "qsub -q long.q@cbsubrito2 -S /bin/bash -e $ERR -o $LOG -N {params.n} -l h_vmem={resources.mem_mb}G"
-
