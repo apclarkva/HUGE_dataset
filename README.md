@@ -1,4 +1,4 @@
-# HUGE_dataset
+#HUGE_dataset
 Download [huge dataset](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=prjna217052&go=go) (prjna217052), clean with snakemake quality control protocol, and align with BWA MEM. Before download, I wrote an R script to find the SRR numbers for only samples that were part of the HUGE study, as the prjna217052 bioproject includes far more data.
 
 ### Downloading the huge dataset (`./`)
@@ -13,3 +13,4 @@ Files, in logical order of execution:
 The quality control (QC) protocol removes duplicate reads, human reads, and Illumina adapters from metagenomic data, and performs quality trimming. Each step is outlined below. It is important to keep track of read counts at each step (i.e. how many reads are you losing at each step?) and making sure that every file completes each step successfully.
 
 ### BWA MEM (`./bwa-mem`)
+- Start BWA MEM explanation here
