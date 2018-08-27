@@ -1,14 +1,14 @@
 ##-----------------------------------------------------------------------------------##
 ## The list of samples to be processed
 ##-----------------------------------------------------------------------------------##
-BASE="/workdir/users/agk85/gates/gates_QC/round1/lane1"
-SAMPLES, = glob_wildcards(BASE + "/raw_fastq/{NAME}_R1.fastq.gz")
+BASE="/workdir/data/HUGE_dataset"
+SAMPLES, = glob_wildcards(BASE + "/raw_fastq/{NAME}_1.fastq.gz")
 NB_SAMPLES = len(SAMPLES)
 
 rule final:
 	input:
- 		expand(BASE+"/0-unzipped/{NAME}_R1.fastq",NAME=SAMPLES),
-		expand(BASE+"/0-unzipped/{NAME}_R2.fastq",NAME=SAMPLES),
+ 		expand(BASE+"/0-unzipped/{NAME}_1.fastq",NAME=SAMPLES),
+		expand(BASE+"/0-unzipped/{NAME}_2.fastq",NAME=SAMPLES),
 		expand(BASE+"/0-unzipped/{NAME}_unzip_done",NAME=SAMPLES),
 		expand(BASE + "/3-trimmo/{NAME}.1.fastq", NAME=SAMPLES),
 		expand(BASE + "/3-trimmo/{NAME}.2.fastq", NAME=SAMPLES),
@@ -17,16 +17,16 @@ rule final:
 
 rule gunzip:
 	input:
- 		gzip1 = BASE+"/raw_fastq/{NAME}_R1.fastq.gz",
-		gzip2 = BASE+"/raw_fastq/{NAME}_R2.fastq.gz"
+ 		gzip1 = BASE+"/raw_fastq/{NAME}_1.fastq.gz",
+		gzip2 = BASE+"/raw_fastq/{NAME}_2.fastq.gz"
 	params:
 		out=BASE+"/0-unzipped",
 		n="unzip_{NAME}"
 	resources:
 		mem_mb=lambda wildcards, attempt: attempt * 10
 	output:
-		unzip1=BASE + "/0-unzipped/{NAME}_R1.fastq",
-		unzip2=BASE + "/0-unzipped/{NAME}_R2.fastq",
+		unzip1=BASE + "/0-unzipped/{NAME}_1.fastq",
+		unzip2=BASE + "/0-unzipped/{NAME}_2.fastq",
 		tfile=BASE+"/0-unzipped/{NAME}_unzip_done"
 	shell: """
 		if [ ! -d {params.out} ]; then mkdir -p {params.out}; fi 	
@@ -37,8 +37,8 @@ rule gunzip:
 
 rule derep:
 	input:
-		R1=BASE + "/0-unzipped/{NAME}_R1.fastq",
-		R2=BASE + "/0-unzipped/{NAME}_R2.fastq"
+		R1=BASE + "/0-unzipped/{NAME}_1.fastq",
+		R2=BASE + "/0-unzipped/{NAME}_2.fastq"
 	params: 
 		n="derep_{NAME}",
 		out=BASE + "/1-derep/out_bad",
@@ -108,8 +108,8 @@ rule trimmo:
 
 rule readCount:
 	input: 
-		BASE + "/0-unzipped/{NAME}_R1.fastq",
-		BASE + "/0-unzipped/{NAME}_R2.fastq",
+		BASE + "/0-unzipped/{NAME}_1.fastq",
+		BASE + "/0-unzipped/{NAME}_2.fastq",
 		BASE + "/1-derep/{NAME}.derep_1.fastq",
 		BASE + "/1-derep/{NAME}.derep_2.fastq",
 		BASE + "/2-bmtagger/{NAME}.human_1.fastq",
@@ -149,7 +149,7 @@ rule Combine_readcounts:
 		BASE + '/ReadCounts.txt'
 	run:
 		with open(output[0], 'w') as out:
-			out.write('Name\tRaw_R1\tRaw_R2\tDerep_R1\tDerep_R2\tBmtagger_R1\tBmtagger_R2\tTrimmo_R1\tTrimmo_R2\tTrimmo_solo_R1\tTrimmo_solo_R2\n')
+			out.write('Name\tRaw_1\tRaw_2\tDerep_1\tDerep_2\tBmtagger_1\tBmtagger_2\tTrimmo_1\tTrimmo_2\tTrimmo_solo_1\tTrimmo_solo_2\n')
 			for i in input:
 				for line in open(i):
 					out.write(line)

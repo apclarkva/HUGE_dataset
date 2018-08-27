@@ -1,4 +1,4 @@
-#HUGE_dataset
+# HUGE_dataset
 Download [huge dataset](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=prjna217052&go=go) (prjna217052), clean with snakemake quality control protocol, and align with BWA MEM. Before download, I wrote an R script to find the SRR numbers for only samples that were part of the HUGE study, as the prjna217052 bioproject includes far more data.
 
 ### Downloading the huge dataset (`./`)
