@@ -3,6 +3,8 @@
 #$ -V
 #$ -t 1
 #$ -pe parenv 10
+#$ -m bes
+#$ -M apclarkva@gmail.com
 #$ -e /workdir/data/HUGE_dataset/QC/err/snakemake_$JOB_ID.err
 #$ -o /workdir/data/HUGE_dataset/QC/log/snakemake_$JOB_ID.out
 #$ -wd /workdir/data/HUGE_dataset
