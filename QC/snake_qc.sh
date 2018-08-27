@@ -26,8 +26,8 @@
 SNAKEFILE=/workdir/data/HUGE_dataset/QC/Snake_qc #so change this after you move the snakefile
 RESTARTS=5
 JOBS=10 # max number of jobs you want running at a given time
-LOG=/workdir/users/apc223/HUGE_dataset/ #change this
-ERR=/workdir/users/apc223/HUGE_dataset/ #change this
+LOG=/workdir/data/HUGE_dataset/QC/err/ #change this
+ERR=/workdir/data/HUGE_dataset/QC/err/ #change this
 
 
 #and remember to change your snake file so it points to your directory first main line with samples
