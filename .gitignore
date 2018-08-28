@@ -6,3 +6,4 @@ raw_fastq
 4-readcounts
 QC/err
 QC/log
+.snakemake
