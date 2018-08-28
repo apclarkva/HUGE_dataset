@@ -1,11 +1,15 @@
 #$ -S /bin/bash
 #$ -N BWA_mem
 #$ -V
-#$ -o /workdir/users/ #Location for stdout
-#$ -e /workdir/users/ #Location for stderr
-#$ -wd /workdir/users/ #Location of your working directory
-#$ -l h_vmem=15G #How much memory your job requires, default is up to 4GB if left blank
-#$ -t 1 #The number of array jobs
+#$ -t 1
+#$ -pe parenv 10
+#$ -m bes
+#$ -M apclarkva@gmail.com
+#$ -e /workdir/data/HUGE_dataset/QC/err/snakemake_$JOB_ID.err
+#$ -o /workdir/data/HUGE_dataset/QC/log/snakemake_$JOB_ID.out
+#$ -wd /workdir/data/HUGE_dataset
+#$ -l h_vmem=1G
+#$ -q long.q@cbsubrito
 
 #This script will align data to a chosen reference as paired end reads using BWA
 
