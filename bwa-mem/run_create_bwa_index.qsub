@@ -9,7 +9,7 @@
 #$ -t 1 #Number of jobs
 
 #This qsub indexes a fasta file for alignments with BWA
-WRK=/workdir/users/
+WRK=/workdir/data/HUGE_dataset/
 
 #Get file names
 LIST=$WRK/        #Your list of samples/files
