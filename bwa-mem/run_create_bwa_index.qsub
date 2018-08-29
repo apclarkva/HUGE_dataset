@@ -1,5 +1,5 @@
 #$ -S /bin/bash
-#$ -N BWA_mem
+#$ -N BWA_index_assemblies
 #$ -V
 #$ -t 1
 #$ -m bes
