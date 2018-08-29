@@ -5,8 +5,8 @@
 #$ -pe parenv 10
 #$ -m bes
 #$ -M apclarkva@gmail.com
-#$ -e /workdir/data/HUGE_dataset/QC/err/snakemake_$JOB_ID.err
-#$ -o /workdir/data/HUGE_dataset/QC/log/snakemake_$JOB_ID.out
+#$ -e /workdir/data/HUGE_dataset/bwa-mem/err/snakemake_$JOB_ID.err
+#$ -o /workdir/data/HUGE_dataset/bwa-mem/log/snakemake_$JOB_ID.out
 #$ -wd /workdir/data/HUGE_dataset
 #$ -l h_vmem=1G
 #$ -q long.q@cbsubrito
@@ -14,18 +14,18 @@
 #This script will align data to a chosen reference as paired end reads using BWA
 
 #Set directories
-WRK=/workdir/users/
+WRK=/workdir/data/HUGE_dataset/
 OUT=$WRK/bwa_alignments
 if [! -e $OUT]; then mkdir -p $OUT; fi
 
 
 #Create design file of file names
-LIST=$WRK/design_files/sample_names.txt #The location and name of your "design file" or list of file names in a text/csv file
+LIST=$WRK/srr-data.txt #The location and name of your "design file" or list of file names in a text/csv file
 	DESIGN=$(sed -n "${SGE_TASK_ID}p" $LIST)
 	NAME=`basename "$DESIGN"`
 
-READ1=/location/of/your/data/${NAME}.1.fastq
-READ2=/location/of/your/data/${NAME}.2.fastq
+READ1=$WRK/3-trimmo/${NAME}.1.fastq
+READ2=$WRK/3-trimmo/${NAME}.2.fastq
 
 #BWA mem takes the prefix of the header files
 #If you have never run this before with a specific reference, you need to index the reference first. Refer to "run_create_bwa_index.qsub"
