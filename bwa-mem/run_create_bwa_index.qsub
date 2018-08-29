@@ -12,11 +12,11 @@
 WRK=/workdir/data/HUGE_dataset/
 
 #Get file names
-LIST=$WRK/        #Your list of samples/files
+LIST=$WRK/srr-data.txt        #Your list of samples/files
   DESIGN=$(sed -n "${SGE_TASK_ID}p" $LIST) #Don't change this
   NAME=`basename "$DESIGN"`    #Don't change this
 
-FASTA=$WRK/  #The FASTA file to be indexed 
+FASTA=$WRK/bwa-mem/all_seqs.fa.bz2  #The FASTA file to be indexed 
 
 
 export PATH=/programs/bwa-0.7.8
