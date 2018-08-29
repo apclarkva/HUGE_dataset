@@ -7,7 +7,7 @@
 #$ -e /workdir/data/HUGE_dataset/bwa-mem/err/index.err
 #$ -o /workdir/data/HUGE_dataset/bwa-mem/log/index.out
 #$ -wd /workdir/data/HUGE_dataset/bwa-mem
-#$ -l h_vmem=1G
+#$ -l h_vmem=16G
 #$ -q long.q@cbsubrito
 
 #This qsub indexes a fasta file for alignments with BWA
