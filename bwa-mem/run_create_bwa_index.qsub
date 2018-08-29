@@ -13,14 +13,8 @@
 #This qsub indexes a fasta file for alignments with BWA
 WRK=/workdir/data/HUGE_dataset/
 
-#Get file names
-LIST=$WRK/3-trimmo        #Your list of samples/files
-  DESIGN=$(sed -n "${SGE_TASK_ID}p" $LIST) #Don't change this
-  NAME=`basename "$DESIGN"`    #Don't change this
-
-FASTA=$WRK/bwa-mem/all_seqs.fa.bz2  #The FASTA file to be indexed 
-
+FASTA=$WRK/bwa-mem/all_seqs.fa  #The FASTA file to be indexed 
 
 export PATH=/programs/bwa-0.7.8
 #Format is "bwa index -a bwtsw -p <PREFIX FOR OUTPUT> <INPUT FASTA>
-bwa index -a bwtsw -p ${NAME} $FASTA
+bwa index -a bwtsw -p all_seqs $FASTA
