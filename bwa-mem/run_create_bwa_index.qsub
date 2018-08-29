@@ -6,7 +6,7 @@
 #$ -M apclarkva@gmail.com
 #$ -e /workdir/data/HUGE_dataset/bwa-mem/err/snakemake_$JOB_ID.err
 #$ -o /workdir/data/HUGE_dataset/bwa-mem/log/snakemake_$JOB_ID.out
-#$ -wd /workdir/data/HUGE_dataset
+#$ -wd /workdir/data/HUGE_dataset/bwa-mem
 #$ -l h_vmem=1G
 #$ -q long.q@cbsubrito
 
@@ -14,7 +14,7 @@
 WRK=/workdir/data/HUGE_dataset/
 
 #Get file names
-LIST=$WRK/srr-data.txt        #Your list of samples/files
+LIST=$WRK/3-trimmo        #Your list of samples/files
   DESIGN=$(sed -n "${SGE_TASK_ID}p" $LIST) #Don't change this
   NAME=`basename "$DESIGN"`    #Don't change this
 
