@@ -2,7 +2,7 @@
 #$ -N unzip
 #$ -V
 #$ -t 1
-#$ -pe parenv 1
+#$ -pe parenv 20
 #$ -m bes
 #$ -M apclarkva@gmail.com
 #$ -e /workdir/data/HUGE_dataset/bwa-mem/err/SRID_$JOB_ID.err
@@ -11,4 +11,4 @@
 #$ -l h_vmem=16G
 #$ -q long.q@cbsubrito
 
-python SRID.py -b ../bam-alignments/SRR2187348.bam -p 12 -r 100 -m 200 -s 71 -n 4 -o ../mobile-elements/out.tab
+python3 srid-parallel.py
