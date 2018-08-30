@@ -7,7 +7,7 @@
 #$ -M apclarkva@gmail.com
 #$ -e /workdir/data/HUGE_dataset/bwa-mem/err/bwa_mem$JOB_ID.err
 #$ -o /workdir/data/HUGE_dataset/bwa-mem/log/bwa_mem$JOB_ID.out
-#$ -wd /workdir/data/HUGE_dataset
+#$ -wd /workdir/data/HUGE_dataset/bwa-mem
 #$ -l h_vmem=16G
 #$ -q long.q@cbsubrito
 
