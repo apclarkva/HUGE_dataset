@@ -1,0 +1,14 @@
+#$ -S /bin/bash
+#$ -N unzip
+#$ -V
+#$ -t 1
+#$ -pe parenv 1
+#$ -m bes
+#$ -M apclarkva@gmail.com
+#$ -e /workdir/data/HUGE_dataset/bwa-mem/err/unzip_$JOB_ID.err
+#$ -o /workdir/data/HUGE_dataset/bwa-mem/log/unzip_$JOB_ID.out
+#$ -wd /workdir/data/HUGE_dataset/bwa-mem/SRID
+#$ -l h_vmem=1G
+#$ -q long.q@cbsubrito
+
+python SRID.py -b ./bam-alignments/SRR2187348.bam -p 12 -r 100 -m 200 -s 71 -n 4 -o ../mobile-elements/out.tab
