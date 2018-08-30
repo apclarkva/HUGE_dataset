@@ -1,5 +1,6 @@
 bwa-mem/reference
-bwa-mem/bwa_alignments
+bwa-mem/bwa-alignments
+bwa-mem/bam-alignments
 bwa-mem/err
 bwa-mem/log
 raw_fastq
