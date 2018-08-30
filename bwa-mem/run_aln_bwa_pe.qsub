@@ -29,7 +29,7 @@ READ2=$WRK/3-trimmo/${NAME}.2.fastq
 
 #BWA mem takes the prefix of the header files
 #If you have never run this before with a specific reference, you need to index the reference first. Refer to "run_create_bwa_index.qsub"
-REF=$WRK/references/
+REF=$WRK/bwa-mem/reference/all_seqs.fa
 
 #Export the path to bwa
 export PATH=/programs/bwa-0.7.8
