@@ -1,5 +1,4 @@
-bwa-mem/all_seqs.fa
-bwa-mem/all_seqs.fa.bz2
+bwa-mem/all_seqs
 raw_fastq
 0-unzipped
 1-derep
