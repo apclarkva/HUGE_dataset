@@ -1,4 +1,7 @@
 bwa-mem/reference
+bwa-mem/bwa_alignments
+bwa-mem/err
+bwa-mem/log
 raw_fastq
 0-unzipped
 1-derep
