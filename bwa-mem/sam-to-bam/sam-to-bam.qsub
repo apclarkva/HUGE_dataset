@@ -1,0 +1,15 @@
+#$ -S /bin/bash
+#$ -N SAM_BAM
+#$ -V
+#$ -t 1
+#$ -pe parenv 20
+#$ -m bes
+#$ -M apclarkva@gmail.com
+#$ -e /workdir/data/HUGE_dataset/bwa-mem/err/bwa_mem$JOB_ID.err
+#$ -o /workdir/data/HUGE_dataset/bwa-mem/log/bwa_mem$JOB_ID.out
+#$ -wd /workdir/data/HUGE_dataset/bwa-mem/sam-to-bam
+#$ -l h_vmem=16G
+#$ -q long.q@cbsubrito
+
+#This script will align data to a chosen reference as paired end reads using BWA
+python3 sam-to-bam.py
