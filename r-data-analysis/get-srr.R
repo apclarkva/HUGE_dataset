@@ -29,12 +29,12 @@ hugeDF <- data.frame("sample" = hugeProjects$V11, "SRR" = hugeProjects$V21)
 
 #candidate B values
 candidateB <- hugeDF[grep("-B-", hugeDF$sample),]
-candidateB$sample <- sub("HUGE-B-", "2011-", candidateB$sample)
+candidateB$sample <- sub("HUGE-B-", "2013-", candidateB$sample)
 candidateB$sample <- as.Date(sub(".ST", "", candidateB$sample))
 
 #altered DF
 candidateA <- hugeDF[-grep("-B-", hugeDF$sample),]
-candidateA$sample <- sub("HUGE", "2011", candidateA$sample)
+candidateA$sample <- sub("HUGE", "2013", candidateA$sample)
 candidateA$sample <- as.Date(sub(".ST", "", candidateA$sample))
 
 #read in measurements from .tab file
