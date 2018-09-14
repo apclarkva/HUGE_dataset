@@ -18,5 +18,3 @@ tableB <- sampleTableB[!is.na(sampleTableB$Scaffolds),]
 immedbIntegrases <- sub("\\..*", "",immedb$MGE.coordinate)
 tableB$integrases <- sub(".*ref\\|", "",tableB$Scaffolds)
 tableB$integrases <- sub("\\..*", "", tableB$integrases)
-
-similar <-intersect(immedbIntegrases, tableB$integrases)

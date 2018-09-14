@@ -21,3 +21,5 @@ sridCountA <- data.frame(rev(sridCountA))
 sridCountB <- table(tableB$Scaffolds)
 sridCountB <- sridCountB[order(sridCountB)]
 sridCountB <- data.frame(rev(sridCountB))
+
+

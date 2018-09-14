@@ -52,9 +52,8 @@ sampleTableB <- sampleTableA
 add_to_table <- function(SRR, date, candidate, sampleTable) {
   sampleRead <- read.table(paste("mobile-elements/", SRR,".mobile.tab", sep=""), header = TRUE, sep="\t")
   sampleReadDimensions <- dim(sampleRead) #use first dimensions
-
-  if(sampleReadDimensions[1] == 0) {
-
+  
+  if(sampleReadDimensions[1] <= 1) {
     sampleRead <- data.frame("Scaffolds" = c(NA),
                              "Split.Site.1" = c(NA),
                              "Split.Site.2" = c(NA),
@@ -107,11 +106,41 @@ samplesACountOrder <- samplesACount[order(as.Date(names(samplesACount)))]
 samplesBCountOrder <- samplesBCount[order(as.Date(names(samplesBCount)))]
 
 par(mfrow=c(1,2))
-barplot(samplesACountOrder, main="Candidate A",
-        xlab = "Date", ylab = "Count Detected Potential MGEs")
-barplot(samplesBCountOrder, main="Candidate B",
-        xlab = "Date", ylab = "Count Detected Potential MGEs")
+samplesACountOrder <- replace(samplesACountOrder, samplesACountOrder == 0, 1)
+plot(as.Date(names(samplesACountOrder)), unname(samplesACountOrder), main="Candidate A",
+        xlab = "Date", ylab = "Count Detected Potential MGEs", ylim=c(0, 40), yaxp = c(0, 40, 4))
+lines(as.Date(names(samplesACountOrder)), unname(samplesACountOrder))
+points(as.Date(names(samplesACountOrder[samplesACountOrder==1])), samplesACountOrder[samplesACountOrder==1], bg="black", pch=21)
+axis(side=2, at=seq(0,40,10), labels=seq(0,40,10))
+
+
+samplesBCountOrder <- replace(samplesBCountOrder, samplesBCountOrder == 0, 1)
+plot(as.Date(names(samplesBCountOrder)), unname(samplesBCountOrder), main="Candidate B",
+     xlab = "Date", ylab = "Count Detected Potential MGEs", ylim=c(0, 40), yaxp = c(0, 40, 4))
+lines(as.Date(names(samplesBCountOrder)), samplesBCountOrder)
+points(as.Date(names(samplesBCountOrder[samplesBCountOrder==1])), samplesBCountOrder[samplesBCountOrder==1], bg="black", pch=21)
+axis(side=2, at=seq(0,40,10), labels=seq(0,40,10))
+
+
+sampleBOverlap <- samplesBCountOrder[13:15]
+tableBOverlap <- tableB[is.element(as.Date(tableB$Date), as.Date(names(sampleBOverlap))),]
+dupScaffolds <- tableBOverlap$Scaffolds[duplicated(tableBOverlap$Scaffolds)]
+tableBOverlap <- tableBOverlap[is.element(tableBOverlap$Scaffolds, dupScaffolds),]
+
+dupSplit <- tableBOverlap$Split.Site.1[duplicated(tableBOverlap$Split.Site.1)]
+tableBOverlap <- tableBOverlap[is.element(tableBOverlap$Split.Site.1, dupSplit),]
+
+findOverlapB <- data.frame(date = tableBOverlap$Date, scaffolds = tableBOverlap$Scaffolds, split = tableBOverlap$Split.Site.1)
 
 
 
+sampleAOverlap <- samplesACountOrder[1:13]
+tableAOverlap <- tableA[is.element(as.Date(tableA$Date), as.Date(names(sampleAOverlap))),]
+dupScaffolds <- tableAOverlap$Scaffolds[duplicated(tableAOverlap$Scaffolds)]
+tableAOverlap <- tableAOverlap[is.element(tableAOverlap$Scaffolds, dupScaffolds),]
+
+dupSplit <- tableAOverlap$Split.Site.1[duplicated(tableAOverlap$Split.Site.1)]
+tableAOverlap <- tableAOverlap[is.element(tableAOverlap$Split.Site.1, dupSplit),]
+
+findOverlapA <- data.frame(date = tableAOverlap$Date, scaffolds = tableAOverlap$Scaffolds, split = tableAOverlap$Split.Site.1)
 
