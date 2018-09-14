@@ -3,6 +3,8 @@ In this repo, I take [metagenomic data from two patients over the course of a ye
 
 The data was downloaded from NCBI, cleaned using a snakemake-implemented quality control protocol, and aligned with BWA MEM, using a [nucleotide file representing the HMP reference genome database](https://www.hmpdacc.org/hmp/HMREFG/). Before download, I wrote an R script to find the SRR numbers for only samples that were part of the HUGE study, as the prjna217052 bioproject includes far more data.
 
+[Check out the presentation](https://docs.google.com/presentation/d/1ODe28m4lEkHiNrr6V5k-g8OlGhgPO_ZcWcc8-MSLFxk/edit?usp=sharing)
+
 #### 1. Download dataset (`./`)
 The HUGE dataset includes illumina sequencing reads from two patients over the course of the year. Although the project (prjna217052) has many samples, only ones prefixed with `HUGE-` are metagenomic sampels.
 
@@ -51,8 +53,8 @@ I have moved the `mobile-elements`. You can find them in `./r-data-analysis/mobi
 #### 5. Analysis (`/r-data-analysis/get-srr.R`)
 In this directory, I count the number of MGEs identified in each sample, and determine which MGEs are identified in multiple samples, over time. This file creates graphs that show the frequency of MGEs detected over time for each candidate. Additionally, you can use the data frames to identify which MGEs are detected in multiple samples. Below are a list of variables that are formatted for easy analysis. Each variable below has an equivalent for candidate B.
 
-- `findOverlapA` &mdash; contains the date, scaffold, and start split site for all duplicated elements in the first thirteen samples of candidate A. 
--`tableA` &mdash; contains information about all MGEs in all samples of Candidate A. Use `names(tableA)` to see these names.
+* `findOverlapA` &mdash; contains the date, scaffold, and start split site for all duplicated elements in the first thirteen samples of candidate A. 
+* `tableA` &mdash; contains information about all MGEs in all samples of Candidate A. Use `names(tableA)` to see these names.
 
 
 
